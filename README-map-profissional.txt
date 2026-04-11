@@ -1,0 +1,1 @@
+Substitua script.js e style.css pelos arquivos deste pacote. O mapa foi corrigido para evitar renderização duplicada, limpar o container antes de redesenhar, usar o conjunto filtrado visível e aplicar tooltip mais rica. Se o seu api/countries.json vier como objeto {"countries": [...]}, o script agora normaliza esse formato automaticamente.
