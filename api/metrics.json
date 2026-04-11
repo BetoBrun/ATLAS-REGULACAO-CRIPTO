@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-04-11T07:19:09.704284Z",
-  "total_jurisdictions": 195,
+  "jurisdictions_mapped": 195,
   "average_score": 50.8,
   "licensed_regimes": 12,
-  "cbdc_programmes": 10,
-  "source_backed_profiles": 19,
-  "primary_sources_catalogued": 9,
-  "defi_defined_regimes": 14
+  "cbdc_programmes": 188,
+  "normative_acts_catalogued": 80,
+  "source_backed_profiles": 29,
+  "primary_source_backed_profiles": 28,
+  "primary_sources_catalogued": 40
 }
