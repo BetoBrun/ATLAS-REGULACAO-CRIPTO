@@ -1,0 +1,33 @@
+{
+  "items": [
+    {
+      "title_en": "FSB crypto framework",
+      "title_pt": "Framework cripto do FSB",
+      "publisher": "FSB",
+      "jurisdictions": [
+        "EUU",
+        "USA"
+      ],
+      "themes": [
+        "stablecoins",
+        "defi"
+      ],
+      "year": 2023
+    },
+    {
+      "title_en": "FATF virtual assets guidance",
+      "title_pt": "Guia do GAFI sobre ativos virtuais",
+      "publisher": "FATF",
+      "jurisdictions": [
+        "USA",
+        "SGP",
+        "GBR"
+      ],
+      "themes": [
+        "aml",
+        "defi"
+      ],
+      "year": 2021
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "experiences": [
+    {
+      "title_en": "MiCA implementation",
+      "title_pt": "Implementação do MiCA",
+      "category": "implementation",
+      "summary_en": "European rollout of MiCA for CASPs and issuers.",
+      "summary_pt": "Implementação europeia do MiCA para CASPs e emissores."
+    },
+    {
+      "title_en": "DeFi enforcement pressure",
+      "title_pt": "Pressão regulatória sobre DeFi",
+      "category": "defi",
+      "summary_en": "Jurisdictions increasingly regulate front ends and affiliated actors.",
+      "summary_pt": "As jurisdições regulam cada vez mais front-ends e atores afiliados."
+    }
+  ]
+}

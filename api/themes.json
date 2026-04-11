@@ -1,0 +1,24 @@
+{
+  "themes": [
+    {
+      "slug": "stablecoins",
+      "title_en": "Stablecoins",
+      "title_pt": "Stablecoins"
+    },
+    {
+      "slug": "tokenization",
+      "title_en": "Tokenization",
+      "title_pt": "Tokenização"
+    },
+    {
+      "slug": "cbdc",
+      "title_en": "CBDC and Drex",
+      "title_pt": "CBDC e Drex"
+    },
+    {
+      "slug": "defi",
+      "title_en": "DeFi",
+      "title_pt": "DeFi"
+    }
+  ]
+}
