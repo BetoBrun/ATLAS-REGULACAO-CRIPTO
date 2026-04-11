@@ -1,1367 +1,182 @@
 [
   {
-    "country": "Antigua and Barbuda",
-    "iso3": "ATG",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Bahamas",
-    "iso3": "BHS",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Barbados",
-    "iso3": "BRB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Belize",
-    "iso3": "BLZ",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Bolivia, Plurinational State of",
-    "iso3": "BOL",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Colombia",
-    "iso3": "COL",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Costa Rica",
-    "iso3": "CRI",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Cuba",
-    "iso3": "CUB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Dominica",
-    "iso3": "DMA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Dominican Republic",
-    "iso3": "DOM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Ecuador",
-    "iso3": "ECU",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Grenada",
-    "iso3": "GRD",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Guatemala",
-    "iso3": "GTM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Guyana",
-    "iso3": "GUY",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Haiti",
-    "iso3": "HTI",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Honduras",
-    "iso3": "HND",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Jamaica",
-    "iso3": "JAM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Mexico",
-    "iso3": "MEX",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Nicaragua",
-    "iso3": "NIC",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Panama",
-    "iso3": "PAN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Peru",
-    "iso3": "PER",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Saint Kitts and Nevis",
-    "iso3": "KNA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Saint Lucia",
-    "iso3": "LCA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Saint Vincent and the Grenadines",
-    "iso3": "VCT",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Suriname",
-    "iso3": "SUR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Trinidad and Tobago",
-    "iso3": "TTO",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Uruguay",
-    "iso3": "URY",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Venezuela",
-    "iso3": "VEN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 48
-  },
-  {
-    "country": "Albania",
-    "iso3": "ALB",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Andorra",
-    "iso3": "AND",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Armenia",
-    "iso3": "ARM",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Austria",
-    "iso3": "AUT",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Azerbaijan",
-    "iso3": "AZE",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Belarus",
-    "iso3": "BLR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Belgium",
-    "iso3": "BEL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Bosnia and Herzegovina",
-    "iso3": "BIH",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Bulgaria",
-    "iso3": "BGR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Croatia",
-    "iso3": "HRV",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Cyprus",
-    "iso3": "CYP",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Czechia",
-    "iso3": "CZE",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Denmark",
-    "iso3": "DNK",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Estonia",
-    "iso3": "EST",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Finland",
-    "iso3": "FIN",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Georgia",
-    "iso3": "GEO",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Greece",
-    "iso3": "GRC",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Holy See",
-    "iso3": "VAT",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Hungary",
-    "iso3": "HUN",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Iceland",
-    "iso3": "ISL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Ireland",
-    "iso3": "IRL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Italy",
-    "iso3": "ITA",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Latvia",
-    "iso3": "LVA",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Liechtenstein",
-    "iso3": "LIE",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Lithuania",
-    "iso3": "LTU",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Luxembourg",
-    "iso3": "LUX",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Malta",
-    "iso3": "MLT",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Moldova",
-    "iso3": "MDA",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Monaco",
-    "iso3": "MCO",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Montenegro",
-    "iso3": "MNE",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Netherlands",
-    "iso3": "NLD",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "North Macedonia",
-    "iso3": "MKD",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Norway",
-    "iso3": "NOR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Poland",
-    "iso3": "POL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Portugal",
-    "iso3": "PRT",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Romania",
-    "iso3": "ROU",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Russia",
-    "iso3": "RUS",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "San Marino",
-    "iso3": "SMR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Serbia",
-    "iso3": "SRB",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Slovakia",
-    "iso3": "SVK",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Slovenia",
-    "iso3": "SVN",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Spain",
-    "iso3": "ESP",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Sweden",
-    "iso3": "SWE",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Ukraine",
-    "iso3": "UKR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 58
-  },
-  {
-    "country": "Bahrain",
-    "iso3": "BHR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Iran",
-    "iso3": "IRN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Iraq",
-    "iso3": "IRQ",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Israel",
-    "iso3": "ISR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Jordan",
-    "iso3": "JOR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Kuwait",
-    "iso3": "KWT",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Lebanon",
-    "iso3": "LBN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Oman",
-    "iso3": "OMN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Palestine",
-    "iso3": "PSE",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Qatar",
-    "iso3": "QAT",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Saudi Arabia",
-    "iso3": "SAU",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Syria",
-    "iso3": "SYR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Türkiye",
-    "iso3": "TUR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Yemen",
-    "iso3": "YEM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 46
-  },
-  {
-    "country": "Afghanistan",
-    "iso3": "AFG",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Bangladesh",
-    "iso3": "BGD",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Bhutan",
-    "iso3": "BTN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Brunei",
-    "iso3": "BRN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Cambodia",
-    "iso3": "KHM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Indonesia",
-    "iso3": "IDN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Kazakhstan",
-    "iso3": "KAZ",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Kyrgyzstan",
-    "iso3": "KGZ",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Laos",
-    "iso3": "LAO",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Malaysia",
-    "iso3": "MYS",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Maldives",
-    "iso3": "MDV",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Mongolia",
-    "iso3": "MNG",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Myanmar",
-    "iso3": "MMR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Nepal",
-    "iso3": "NPL",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "North Korea",
-    "iso3": "PRK",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Pakistan",
-    "iso3": "PAK",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Philippines",
-    "iso3": "PHL",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Sri Lanka",
-    "iso3": "LKA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Tajikistan",
-    "iso3": "TJK",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Thailand",
-    "iso3": "THA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Timor-Leste",
-    "iso3": "TLS",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Turkmenistan",
-    "iso3": "TKM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Uzbekistan",
-    "iso3": "UZB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
-    "country": "Vietnam",
-    "iso3": "VNM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 47
-  },
-  {
     "country": "Algeria",
     "iso3": "DZA",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Algeria. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Algeria. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Angola",
     "iso3": "AGO",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Angola. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Angola. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Benin",
     "iso3": "BEN",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Benin. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Benin. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Botswana",
     "iso3": "BWA",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Botswana. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Botswana. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Burkina Faso",
     "iso3": "BFA",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Burkina Faso. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Burkina Faso. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Burundi",
     "iso3": "BDI",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Burundi. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Burundi. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Cabo Verde",
     "iso3": "CPV",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Cabo Verde. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Cabo Verde. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Cameroon",
     "iso3": "CMR",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Cameroon. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Cameroon. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Central African Republic",
     "iso3": "CAF",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Central African Republic. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Central African Republic. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Chad",
     "iso3": "TCD",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Chad. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Chad. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Comoros",
     "iso3": "COM",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Comoros. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Comoros. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Côte d'Ivoire",
     "iso3": "CIV",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Côte d'Ivoire. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Côte d'Ivoire. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Democratic Republic of the Congo",
     "iso3": "COD",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Democratic Republic of the Congo. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Democratic Republic of the Congo. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Djibouti",
     "iso3": "DJI",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Djibouti. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Djibouti. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Egypt",
     "iso3": "EGY",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Egypt. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Egypt. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Equatorial Guinea",
     "iso3": "GNQ",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Equatorial Guinea. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Equatorial Guinea. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Eritrea",
     "iso3": "ERI",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Eritrea. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Eritrea. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Eswatini",
     "iso3": "SWZ",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Eswatini. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Eswatini. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Ethiopia",
     "iso3": "ETH",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Ethiopia. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Ethiopia. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   },
   {
     "country": "Gabon",
     "iso3": "GAB",
     "last_update": "2026-04-07",
     "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Gambia",
-    "iso3": "GMB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Ghana",
-    "iso3": "GHA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Guinea",
-    "iso3": "GIN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Guinea-Bissau",
-    "iso3": "GNB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Kenya",
-    "iso3": "KEN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Lesotho",
-    "iso3": "LSO",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Liberia",
-    "iso3": "LBR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Libya",
-    "iso3": "LBY",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Madagascar",
-    "iso3": "MDG",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Malawi",
-    "iso3": "MWI",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Mali",
-    "iso3": "MLI",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Mauritania",
-    "iso3": "MRT",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Mauritius",
-    "iso3": "MUS",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Morocco",
-    "iso3": "MAR",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Mozambique",
-    "iso3": "MOZ",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Namibia",
-    "iso3": "NAM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Niger",
-    "iso3": "NER",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Republic of the Congo",
-    "iso3": "COG",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Rwanda",
-    "iso3": "RWA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Sao Tome and Principe",
-    "iso3": "STP",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Senegal",
-    "iso3": "SEN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Seychelles",
-    "iso3": "SYC",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Sierra Leone",
-    "iso3": "SLE",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Somalia",
-    "iso3": "SOM",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "South Africa",
-    "iso3": "ZAF",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "South Sudan",
-    "iso3": "SSD",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Sudan",
-    "iso3": "SDN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Tanzania",
-    "iso3": "TZA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Togo",
-    "iso3": "TGO",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Tunisia",
-    "iso3": "TUN",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Uganda",
-    "iso3": "UGA",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Zambia",
-    "iso3": "ZMB",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Zimbabwe",
-    "iso3": "ZWE",
-    "last_update": "2026-04-07",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Fiji",
-    "iso3": "FJI",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Kiribati",
-    "iso3": "KIR",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Marshall Islands",
-    "iso3": "MHL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Micronesia",
-    "iso3": "FSM",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Nauru",
-    "iso3": "NRU",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "New Zealand",
-    "iso3": "NZL",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Palau",
-    "iso3": "PLW",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Papua New Guinea",
-    "iso3": "PNG",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Samoa",
-    "iso3": "WSM",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Solomon Islands",
-    "iso3": "SLB",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Tonga",
-    "iso3": "TON",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Tuvalu",
-    "iso3": "TUV",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Vanuatu",
-    "iso3": "VUT",
-    "last_update": "2026-04-07",
-    "trend": "stable",
-    "score": 55
-  },
-  {
-    "country": "Brazil",
-    "iso3": "BRA",
-    "last_update": "2026-03-30",
-    "trend": "improving",
-    "score": 69
-  },
-  {
-    "country": "United States",
-    "iso3": "USA",
-    "last_update": "2026-03-28",
-    "trend": "improving",
-    "score": 78
-  },
-  {
-    "country": "Singapore",
-    "iso3": "SGP",
-    "last_update": "2026-03-27",
-    "trend": "improving",
-    "score": 83
-  },
-  {
-    "country": "Switzerland",
-    "iso3": "CHE",
-    "last_update": "2026-03-26",
-    "trend": "stable",
-    "score": 85
-  },
-  {
-    "country": "Germany",
-    "iso3": "DEU",
-    "last_update": "2026-03-25",
-    "trend": "stable",
-    "score": 70
-  },
-  {
-    "country": "France",
-    "iso3": "FRA",
-    "last_update": "2026-03-24",
-    "trend": "stable",
-    "score": 69
-  },
-  {
-    "country": "United Arab Emirates",
-    "iso3": "ARE",
-    "last_update": "2026-03-21",
-    "trend": "improving",
-    "score": 86
-  },
-  {
-    "country": "United Kingdom",
-    "iso3": "GBR",
-    "last_update": "2026-03-20",
-    "trend": "improving",
-    "score": 74
-  },
-  {
-    "country": "Argentina",
-    "iso3": "ARG",
-    "last_update": "2026-03-19",
-    "trend": "improving",
-    "score": 59
-  },
-  {
-    "country": "Paraguay",
-    "iso3": "PRY",
-    "last_update": "2026-03-18",
-    "trend": "stable",
-    "score": 51
-  },
-  {
-    "country": "Nigeria",
-    "iso3": "NGA",
-    "last_update": "2026-03-17",
-    "trend": "mixed",
-    "score": 43
-  },
-  {
-    "country": "Chile",
-    "iso3": "CHL",
-    "last_update": "2026-03-16",
-    "trend": "improving",
-    "score": 61
-  },
-  {
-    "country": "El Salvador",
-    "iso3": "SLV",
-    "last_update": "2026-03-15",
-    "trend": "stable",
-    "score": 68
-  },
-  {
-    "country": "India",
-    "iso3": "IND",
-    "last_update": "2026-03-14",
-    "trend": "mixed",
-    "score": 40
-  },
-  {
-    "country": "Japan",
-    "iso3": "JPN",
-    "last_update": "2026-03-13",
-    "trend": "stable",
-    "score": 70
-  },
-  {
-    "country": "China",
-    "iso3": "CHN",
-    "last_update": "2026-03-12",
-    "trend": "stable",
-    "score": 29
-  },
-  {
-    "country": "South Korea",
-    "iso3": "KOR",
-    "last_update": "2026-03-11",
-    "trend": "improving",
-    "score": 64
-  },
-  {
-    "country": "Australia",
-    "iso3": "AUS",
-    "last_update": "2026-03-10",
-    "trend": "improving",
-    "score": 68
-  },
-  {
-    "country": "Canada",
-    "iso3": "CAN",
-    "last_update": "2026-03-09",
-    "trend": "stable",
-    "score": 71
+    "score": 43,
+    "summary_pt": "Perfil comparativo preliminar de Gabon. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+    "summary_en": "Baseline comparative profile for Gabon. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline."
   }
 ]

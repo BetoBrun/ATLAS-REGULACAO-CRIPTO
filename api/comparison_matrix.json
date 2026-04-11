@@ -1,0 +1,145 @@
+{
+  "BRA": {
+    "country": "Brazil",
+    "score": 69,
+    "classification": "favorable",
+    "exchanges": "regulated",
+    "stablecoins": "partially open",
+    "tokenization": "developing",
+    "cbdc": "pilot under debate",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "USA": {
+    "country": "United States",
+    "score": 78,
+    "classification": "favorable",
+    "exchanges": "regulated with litigation risk",
+    "stablecoins": "developing framework",
+    "tokenization": "active",
+    "cbdc": "research only",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "DEU": {
+    "country": "Germany",
+    "score": 70,
+    "classification": "favorable",
+    "exchanges": "regulated",
+    "stablecoins": "regulated under MiCA",
+    "tokenization": "active",
+    "cbdc": "euro area exploration",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "FRA": {
+    "country": "France",
+    "score": 69,
+    "classification": "favorable",
+    "exchanges": "regulated",
+    "stablecoins": "regulated under MiCA",
+    "tokenization": "active",
+    "cbdc": "euro area exploration",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "GBR": {
+    "country": "United Kingdom",
+    "score": 74,
+    "classification": "favorable",
+    "exchanges": "regulated",
+    "stablecoins": "developing framework",
+    "tokenization": "sandboxing",
+    "cbdc": "consultation stage",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "CHE": {
+    "country": "Switzerland",
+    "score": 85,
+    "classification": "very_favorable",
+    "exchanges": "regulated",
+    "stablecoins": "open with compliance",
+    "tokenization": "highly favorable",
+    "cbdc": "wholesale focus",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "SGP": {
+    "country": "Singapore",
+    "score": 83,
+    "classification": "very_favorable",
+    "exchanges": "licensed",
+    "stablecoins": "regulated",
+    "tokenization": "very active",
+    "cbdc": "wholesale experimentation",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "ARE": {
+    "country": "United Arab Emirates",
+    "score": 86,
+    "classification": "very_favorable",
+    "exchanges": "licensed",
+    "stablecoins": "open with rules",
+    "tokenization": "very active",
+    "cbdc": "wholesale and cross-border exploration",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "JPN": {
+    "country": "Japan",
+    "score": 70,
+    "classification": "favorable",
+    "exchanges": "licensed",
+    "stablecoins": "regulated",
+    "tokenization": "active",
+    "cbdc": "research",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "KOR": {
+    "country": "South Korea",
+    "score": 64,
+    "classification": "mixed",
+    "exchanges": "regulated",
+    "stablecoins": "developing",
+    "tokenization": "developing",
+    "cbdc": "research",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "SLV": {
+    "country": "El Salvador",
+    "score": 68,
+    "classification": "favorable",
+    "exchanges": "specialized framework",
+    "stablecoins": "possible",
+    "tokenization": "open",
+    "cbdc": "not central",
+    "defi": "indirectly regulated",
+    "profile_quality": "source_backed"
+  },
+  "PRY": {
+    "country": "Paraguay",
+    "score": 51,
+    "classification": "mixed",
+    "exchanges": "fragmented",
+    "stablecoins": "unclear",
+    "tokenization": "incipient",
+    "cbdc": "not central",
+    "defi": "uncertain",
+    "profile_quality": "source_backed"
+  },
+  "CHN": {
+    "country": "China",
+    "score": 29,
+    "classification": "very_restrictive",
+    "exchanges": "banned",
+    "stablecoins": "restricted",
+    "tokenization": "state-influenced pilots",
+    "cbdc": "advanced state model",
+    "defi": "restricted",
+    "profile_quality": "source_backed"
+  }
+}

@@ -17,8 +17,7 @@
         "taxation": 9,
         "mining_infrastructure": 6,
         "innovation_openness": 10,
-        "anti_centralization": 4,
-        "defi": 7
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "licensed",
@@ -27,7 +26,7 @@
         "taxation": "favorable",
         "mining": "moderate",
         "cbdc": "wholesale and cross-border exploration",
-        "defi": "open through regulated touchpoints"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "VARA regime",
@@ -56,36 +55,16 @@
       "thesis_core": true,
       "score": 86,
       "classification": "very_favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "VARA rulebooks",
-          "authority": "VARA",
-          "url": "https://www.vara.ae/en/regulations/",
-          "year": 2024
-        },
-        {
-          "type": "policy",
-          "title": "UAE virtual assets framework",
-          "authority": "Dubai VARA",
-          "url": "https://www.vara.ae/en/",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "VARA",
-        "ADGM/FSRA as applicable"
-      ],
-      "defi_focus_en": "The UAE is receptive to digital asset innovation but still channels DeFi exposure through licensed entities and controlled market access points.",
-      "defi_focus_pt": "Os Emirados são receptivos à inovação com ativos digitais, mas ainda canalizam a exposição a DeFi por entidades licenciadas e pontos controlados de acesso ao mercado.",
-      "defi_signals_en": [
-        "Regulated wrappers matter more than protocol purity"
-      ],
-      "defi_signals_pt": [
-        "Estruturas reguladas importam mais que a pureza do protocolo"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 4
+      "iso2": "AE",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "Switzerland",
@@ -104,8 +83,7 @@
         "taxation": 8,
         "mining_infrastructure": 6,
         "innovation_openness": 9,
-        "anti_centralization": 4,
-        "defi": 8
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "regulated",
@@ -114,7 +92,7 @@
         "taxation": "competitive",
         "mining": "moderate",
         "cbdc": "wholesale focus",
-        "defi": "comparatively open with functional analysis"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "Swiss DLT Act",
@@ -145,35 +123,16 @@
       "thesis_core": true,
       "score": 85,
       "classification": "very_favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "FINMA guidance on stablecoins and DLT",
-          "authority": "FINMA",
-          "url": "https://www.finma.ch/en/news/2024/07/20240726-mm-stablecoins/",
-          "year": 2024
-        },
-        {
-          "type": "law",
-          "title": "DLT Act framework",
-          "authority": "Swiss Confederation",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2021/33/en",
-          "year": 2021
-        }
-      ],
-      "authorities": [
-        "FINMA"
-      ],
-      "defi_focus_en": "Switzerland offers one of the more functionally sophisticated environments, though DeFi still depends on activity analysis rather than a standalone code.",
-      "defi_focus_pt": "A Suíça oferece um dos ambientes funcionalmente mais sofisticados, embora DeFi ainda dependa de análise por atividade e não de um código autônomo.",
-      "defi_signals_en": [
-        "Functional approach supports innovation with supervision"
-      ],
-      "defi_signals_pt": [
-        "A abordagem funcional apoia inovação com supervisão"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 4
+      "iso2": "CH",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "Singapore",
@@ -192,8 +151,7 @@
         "taxation": 8,
         "mining_infrastructure": 4,
         "innovation_openness": 10,
-        "anti_centralization": 4,
-        "defi": 7
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "licensed",
@@ -202,7 +160,7 @@
         "taxation": "competitive",
         "mining": "limited",
         "cbdc": "wholesale experimentation",
-        "defi": "careful indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "Payment Services Act",
@@ -232,35 +190,16 @@
       "thesis_core": true,
       "score": 83,
       "classification": "very_favorable",
-      "primary_sources": [
-        {
-          "type": "law",
-          "title": "Payment Services Act",
-          "authority": "MAS",
-          "url": "https://www.mas.gov.sg/regulation/acts/payment-services-act",
-          "year": 2019
-        },
-        {
-          "type": "regulator",
-          "title": "MAS Digital Payment Token services",
-          "authority": "MAS",
-          "url": "https://www.mas.gov.sg/regulation/explainers/payment-services-act",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "MAS"
-      ],
-      "defi_focus_en": "Singapore distinguishes licensed token services from broader DeFi activity and tends to regulate touchpoints rather than protocols as such.",
-      "defi_focus_pt": "Singapura distingue serviços licenciados com tokens da atividade DeFi mais ampla e tende a regular os pontos de contato, não os protocolos em si.",
-      "defi_signals_en": [
-        "Strong discipline for intermediated access points"
-      ],
-      "defi_signals_pt": [
-        "Disciplina forte para pontos de acesso intermediados"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 5
+      "iso2": "SG",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "United States",
@@ -279,8 +218,7 @@
         "taxation": 7,
         "mining_infrastructure": 9,
         "innovation_openness": 9,
-        "anti_centralization": 4,
-        "defi": 7
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "regulated with litigation risk",
@@ -289,7 +227,7 @@
         "taxation": "moderate",
         "mining": "favorable in several states",
         "cbdc": "research only",
-        "defi": "active enforcement and indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "GENIUS Act (2025)",
@@ -323,47 +261,16 @@
       "thesis_core": true,
       "score": 78,
       "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "SEC Crypto Assets and Cyber Unit",
-          "authority": "SEC",
-          "url": "https://www.sec.gov/spotlight/cybersecurity-enforcement-actions",
-          "year": 2024
-        },
-        {
-          "type": "regulator",
-          "title": "CFTC Digital Assets",
-          "authority": "CFTC",
-          "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/DigitalAssets",
-          "year": 2024
-        },
-        {
-          "type": "regulator",
-          "title": "FinCEN Convertible Virtual Currency guidance",
-          "authority": "FinCEN",
-          "url": "https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models",
-          "year": 2019
-        }
-      ],
-      "authorities": [
-        "SEC",
-        "CFTC",
-        "FinCEN",
-        "state regulators"
-      ],
-      "defi_focus_en": "US DeFi is shaped by enforcement, commodities and securities law, and AML theories applied to interfaces and affiliated actors.",
-      "defi_focus_pt": "O DeFi nos EUA é moldado por enforcement, direito de commodities e valores mobiliários e teorias AML aplicadas a interfaces e atores afiliados.",
-      "defi_signals_en": [
-        "Strong enforcement risk for front ends and promoters",
-        "Protocol neutrality remains legally uncertain"
-      ],
-      "defi_signals_pt": [
-        "Alto risco de enforcement para front-ends e promotores",
-        "A neutralidade do protocolo permanece juridicamente incerta"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 6
+      "iso2": "US",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "United Kingdom",
@@ -382,8 +289,7 @@
         "taxation": 6,
         "mining_infrastructure": 5,
         "innovation_openness": 8,
-        "anti_centralization": 4,
-        "defi": 6
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "regulated",
@@ -392,7 +298,7 @@
         "taxation": "moderate",
         "mining": "neutral",
         "cbdc": "consultation stage",
-        "defi": "indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "FCA crypto regime",
@@ -421,37 +327,16 @@
       "thesis_core": true,
       "score": 74,
       "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "FCA cryptoasset registration regime",
-          "authority": "FCA",
-          "url": "https://www.fca.org.uk/firms/financial-crime/cryptoassets-registration",
-          "year": 2024
-        },
-        {
-          "type": "policy",
-          "title": "UK cryptoasset regulatory approach",
-          "authority": "HM Treasury",
-          "url": "https://www.gov.uk/government/collections/cryptoassets",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "FCA",
-        "HM Treasury",
-        "Bank of England"
-      ],
-      "defi_focus_en": "The UK increasingly regulates crypto activity through financial promotions, AML registration and future perimeter reform, but does not yet offer a dedicated DeFi regime.",
-      "defi_focus_pt": "O Reino Unido regula crescentemente a atividade cripto por promoções financeiras, registro AML e futura reforma de perímetro, mas ainda não oferece regime dedicado para DeFi.",
-      "defi_signals_en": [
-        "Front ends and promotions are sensitive regulatory points"
-      ],
-      "defi_signals_pt": [
-        "Front-ends e promoções financeiras são pontos sensíveis"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 4
+      "iso2": "GB",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "Canada",
@@ -470,8 +355,7 @@
         "taxation": 6,
         "mining_infrastructure": 8,
         "innovation_openness": 7,
-        "anti_centralization": 4,
-        "defi": 6
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "regulated",
@@ -480,7 +364,7 @@
         "taxation": "moderate",
         "mining": "favorable in some provinces",
         "cbdc": "research",
-        "defi": "indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "CSA guidance",
@@ -509,107 +393,16 @@
       "thesis_core": false,
       "score": 71,
       "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "FINTRAC virtual currency guidance",
-          "authority": "FINTRAC",
-          "url": "https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/lvctr/lvctr-eng",
-          "year": 2024
-        },
-        {
-          "type": "regulator",
-          "title": "CSA staff notices on crypto assets",
-          "authority": "CSA",
-          "url": "https://www.securities-administrators.ca/",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "CSA",
-        "FINTRAC"
-      ],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 4
-    },
-    {
-      "country": "Germany",
-      "iso3": "DEU",
-      "region": "Europe",
-      "trend": "stable",
-      "summary_en": "Germany benefits from EU-level legal certainty under MiCA and strong financial regulation, though compliance can be costly.",
-      "summary_pt": "A Alemanha se beneficia da segurança jurídica em nível europeu sob o MiCA e de uma forte regulação financeira, embora o compliance possa ser custoso.",
-      "last_update": "2026-03-25",
-      "criteria": {
-        "legal_certainty": 17,
-        "proportionality": 10,
-        "exchanges": 8,
-        "stablecoins": 7,
-        "tokenization": 8,
-        "taxation": 6,
-        "mining_infrastructure": 4,
-        "innovation_openness": 7,
-        "anti_centralization": 3,
-        "defi": 6
-      },
-      "status": {
-        "exchanges": "regulated",
-        "stablecoins": "regulated under MiCA",
-        "tokenization": "active",
-        "taxation": "moderate friction",
-        "mining": "limited",
-        "cbdc": "euro area exploration",
-        "defi": "indirect treatment"
-      },
-      "laws": [
-        "MiCA",
-        "German banking supervision rules"
-      ],
-      "opportunities_en": [
-        "Regulated tokenization",
-        "Institutional adoption"
-      ],
-      "opportunities_pt": [
-        "Tokenização regulada",
-        "Adoção institucional"
-      ],
-      "risks_en": [
-        "High compliance cost"
-      ],
-      "risks_pt": [
-        "Alto custo de compliance"
-      ],
-      "references": [
-        {
-          "label": "BaFin",
-          "url": "https://www.bafin.de/"
-        }
-      ],
-      "thesis_core": true,
-      "score": 70,
-      "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "BaFin MiCAR portal",
-          "authority": "BaFin",
-          "url": "https://www.bafin.de/EN/Aufsicht/FinTech/Kryptowerte/MiCAR/micar_node_en.html",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "BaFin"
-      ],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 3
+      "iso2": "CA",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "Japan",
@@ -628,8 +421,7 @@
         "taxation": 5,
         "mining_infrastructure": 4,
         "innovation_openness": 7,
-        "anti_centralization": 4,
-        "defi": 6
+        "anti_centralization": 4
       },
       "status": {
         "exchanges": "licensed",
@@ -638,7 +430,7 @@
         "taxation": "moderate friction",
         "mining": "limited",
         "cbdc": "research",
-        "defi": "cautious indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "Payment Services Act",
@@ -667,35 +459,146 @@
       "thesis_core": false,
       "score": 70,
       "classification": "favorable",
-      "primary_sources": [
+      "iso2": "JP",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
+    },
+    {
+      "country": "Germany",
+      "iso3": "DEU",
+      "region": "Europe",
+      "trend": "stable",
+      "summary_en": "Germany benefits from EU-level legal certainty under MiCA and strong financial regulation, though compliance can be costly.",
+      "summary_pt": "A Alemanha se beneficia da segurança jurídica em nível europeu sob o MiCA e de uma forte regulação financeira, embora o compliance possa ser custoso.",
+      "last_update": "2026-03-25",
+      "criteria": {
+        "legal_certainty": 17,
+        "proportionality": 10,
+        "exchanges": 8,
+        "stablecoins": 7,
+        "tokenization": 8,
+        "taxation": 6,
+        "mining_infrastructure": 4,
+        "innovation_openness": 7,
+        "anti_centralization": 3
+      },
+      "status": {
+        "exchanges": "regulated",
+        "stablecoins": "regulated under MiCA",
+        "tokenization": "active",
+        "taxation": "moderate friction",
+        "mining": "limited",
+        "cbdc": "euro area exploration",
+        "defi": "indirectly regulated"
+      },
+      "laws": [
+        "MiCA",
+        "German banking supervision rules"
+      ],
+      "opportunities_en": [
+        "Regulated tokenization",
+        "Institutional adoption"
+      ],
+      "opportunities_pt": [
+        "Tokenização regulada",
+        "Adoção institucional"
+      ],
+      "risks_en": [
+        "High compliance cost"
+      ],
+      "risks_pt": [
+        "Alto custo de compliance"
+      ],
+      "references": [
         {
-          "type": "law",
-          "title": "Payment Services Act",
-          "authority": "Japan FSA",
-          "url": "https://www.fsa.go.jp/en/refer/acts/index.html",
-          "year": 2017
-        },
-        {
-          "type": "regulator",
-          "title": "Registered crypto-asset exchange service providers",
-          "authority": "Japan FSA",
-          "url": "https://www.fsa.go.jp/en/regulated/licensed/en_kasoutuka.pdf",
-          "year": 2024
+          "label": "BaFin",
+          "url": "https://www.bafin.de/"
         }
       ],
-      "authorities": [
-        "Japan FSA"
+      "thesis_core": true,
+      "score": 70,
+      "classification": "favorable",
+      "iso2": "DE",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
+    },
+    {
+      "country": "France",
+      "iso3": "FRA",
+      "region": "Europe",
+      "trend": "stable",
+      "summary_en": "France combines early digital asset licensing experience with the broader MiCA framework, offering clarity but significant compliance obligations.",
+      "summary_pt": "A França combina experiência precoce em licenciamento de ativos digitais com o quadro mais amplo do MiCA, oferecendo clareza, porém com obrigações relevantes de compliance.",
+      "last_update": "2026-03-24",
+      "criteria": {
+        "legal_certainty": 17,
+        "proportionality": 9,
+        "exchanges": 8,
+        "stablecoins": 7,
+        "tokenization": 8,
+        "taxation": 6,
+        "mining_infrastructure": 4,
+        "innovation_openness": 7,
+        "anti_centralization": 3
+      },
+      "status": {
+        "exchanges": "regulated",
+        "stablecoins": "regulated under MiCA",
+        "tokenization": "active",
+        "taxation": "moderate friction",
+        "mining": "limited",
+        "cbdc": "euro area exploration",
+        "defi": "indirectly regulated"
+      },
+      "laws": [
+        "MiCA",
+        "PSAN regime"
       ],
-      "defi_focus_en": "Japan has mature rules for intermediaries and tokens but remains cautious on DeFi, which is mostly analysed through adjacent categories.",
-      "defi_focus_pt": "O Japão possui regras maduras para intermediários e tokens, mas segue cauteloso com DeFi, que é analisado principalmente por categorias adjacentes.",
-      "defi_signals_en": [
-        "Intermediary clarity exceeds protocol clarity"
+      "opportunities_en": [
+        "Institutional market entry"
       ],
-      "defi_signals_pt": [
-        "A clareza sobre intermediários supera a clareza sobre protocolos"
+      "opportunities_pt": [
+        "Entrada de mercado institucional"
       ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 4
+      "risks_en": [
+        "Regulatory cost"
+      ],
+      "risks_pt": [
+        "Custo regulatório"
+      ],
+      "references": [
+        {
+          "label": "AMF France",
+          "url": "https://www.amf-france.org/"
+        }
+      ],
+      "thesis_core": true,
+      "score": 69,
+      "classification": "favorable",
+      "iso2": "FR",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "Brazil",
@@ -714,8 +617,7 @@
         "taxation": 6,
         "mining_infrastructure": 8,
         "innovation_openness": 7,
-        "anti_centralization": 3,
-        "defi": 5
+        "anti_centralization": 3
       },
       "status": {
         "exchanges": "regulated",
@@ -724,7 +626,7 @@
         "taxation": "moderate friction",
         "mining": "potentially favorable",
         "cbdc": "pilot under debate",
-        "defi": "indirect treatment"
+        "defi": "indirectly regulated"
       },
       "laws": [
         "Law 14.478/2022",
@@ -758,126 +660,16 @@
       "thesis_core": true,
       "score": 69,
       "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "law",
-          "title": "Lei 14.478/2022",
-          "authority": "Congresso Nacional",
-          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm",
-          "year": 2022
-        },
-        {
-          "type": "decree",
-          "title": "Decreto 11.563/2023",
-          "authority": "Presidência da República",
-          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11563.htm",
-          "year": 2023
-        },
-        {
-          "type": "regulator",
-          "title": "BCB ativos virtuais",
-          "authority": "Banco Central do Brasil",
-          "url": "https://www.bcb.gov.br/estabilidadefinanceira/criptoativos",
-          "year": 2024
-        },
-        {
-          "type": "regulator",
-          "title": "CVM orientações sobre criptoativos",
-          "authority": "CVM",
-          "url": "https://www.gov.br/cvm/pt-br",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "Banco Central do Brasil",
-        "CVM",
-        "Receita Federal"
-      ],
-      "defi_focus_en": "Brazil is moving toward clearer regulation of service providers, while DeFi remains mostly treated through indirect legal categories and policy debate.",
-      "defi_focus_pt": "O Brasil avança na regulação de prestadores de serviços, enquanto DeFi ainda é tratado sobretudo por categorias jurídicas indiretas e debate regulatório.",
-      "defi_signals_en": [
-        "No dedicated DeFi statute yet",
-        "Likely indirect treatment via VASP, securities and payments law"
-      ],
-      "defi_signals_pt": [
-        "Ainda sem estatuto específico de DeFi",
-        "Tratamento provável por VASP, valores mobiliários e pagamentos"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 7
-    },
-    {
-      "country": "France",
-      "iso3": "FRA",
-      "region": "Europe",
-      "trend": "stable",
-      "summary_en": "France combines early digital asset licensing experience with the broader MiCA framework, offering clarity but significant compliance obligations.",
-      "summary_pt": "A França combina experiência precoce em licenciamento de ativos digitais com o quadro mais amplo do MiCA, oferecendo clareza, porém com obrigações relevantes de compliance.",
-      "last_update": "2026-03-24",
-      "criteria": {
-        "legal_certainty": 17,
-        "proportionality": 9,
-        "exchanges": 8,
-        "stablecoins": 7,
-        "tokenization": 8,
-        "taxation": 6,
-        "mining_infrastructure": 4,
-        "innovation_openness": 7,
-        "anti_centralization": 3,
-        "defi": 6
-      },
-      "status": {
-        "exchanges": "regulated",
-        "stablecoins": "regulated under MiCA",
-        "tokenization": "active",
-        "taxation": "moderate friction",
-        "mining": "limited",
-        "cbdc": "euro area exploration",
-        "defi": "indirect treatment"
-      },
-      "laws": [
-        "MiCA",
-        "PSAN regime"
-      ],
-      "opportunities_en": [
-        "Institutional market entry"
-      ],
-      "opportunities_pt": [
-        "Entrada de mercado institucional"
-      ],
-      "risks_en": [
-        "Regulatory cost"
-      ],
-      "risks_pt": [
-        "Custo regulatório"
-      ],
-      "references": [
-        {
-          "label": "AMF France",
-          "url": "https://www.amf-france.org/"
-        }
-      ],
-      "thesis_core": true,
-      "score": 69,
-      "classification": "favorable",
-      "primary_sources": [
-        {
-          "type": "regulator",
-          "title": "AMF MiCA transition information",
-          "authority": "AMF",
-          "url": "https://www.amf-france.org/en/news-publications/news-releases/amf-news-releases/mica-amf-recalls-rules-applicable-psans-during-transition-period",
-          "year": 2024
-        }
-      ],
-      "authorities": [
-        "AMF"
-      ],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 3
+      "iso2": "BR",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     }
   ],
   "top_restrictive": [
@@ -898,8 +690,7 @@
         "taxation": 5,
         "mining_infrastructure": 1,
         "innovation_openness": 4,
-        "anti_centralization": 0,
-        "defi": 1
+        "anti_centralization": 0
       },
       "status": {
         "exchanges": "banned",
@@ -908,7 +699,7 @@
         "taxation": "secondary issue",
         "mining": "hostile",
         "cbdc": "advanced state model",
-        "defi": "effectively banned"
+        "defi": "restricted"
       },
       "laws": [
         "Crypto trading bans",
@@ -937,28 +728,16 @@
       "thesis_core": true,
       "score": 29,
       "classification": "very_restrictive",
-      "primary_sources": [
-        {
-          "type": "policy",
-          "title": "PBOC and agencies notice on virtual currency risks",
-          "authority": "PBOC and agencies",
-          "url": "http://www.pbc.gov.cn/",
-          "year": 2021
-        }
-      ],
-      "authorities": [
-        "PBOC and other national authorities"
-      ],
-      "defi_focus_en": "China treats decentralised crypto-financial activity within a strongly restrictive framework, while supporting state-led digital monetary infrastructure.",
-      "defi_focus_pt": "A China trata a atividade cripto-financeira descentralizada dentro de um quadro fortemente restritivo, ao mesmo tempo em que apoia infraestrutura monetária digital liderada pelo Estado.",
-      "defi_signals_en": [
-        "Very low room for open DeFi markets"
-      ],
-      "defi_signals_pt": [
-        "Espaço muito baixo para mercados DeFi abertos"
-      ],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 3
+      "iso2": "CN",
+      "profile_quality": "source_backed",
+      "primary_source_count": 1,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
       "country": "India",
@@ -977,8 +756,7 @@
         "taxation": 2,
         "mining_infrastructure": 5,
         "innovation_openness": 6,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "allowed with friction",
@@ -987,7 +765,7 @@
         "taxation": "heavy",
         "mining": "mixed",
         "cbdc": "retail pilot",
-        "defi": "tax-heavy uncertain treatment"
+        "defi": "uncertain"
       },
       "laws": [
         "Tax provisions",
@@ -1014,32 +792,24 @@
       "thesis_core": false,
       "score": 40,
       "classification": "restrictive",
-      "primary_sources": [
-        {
-          "type": "law",
-          "title": "Finance Act VDA provisions",
-          "authority": "India",
-          "url": "https://www.indiabudget.gov.in/doc/Budget2022_23/Finance_Bill.pdf",
-          "year": 2022
-        }
-      ],
-      "authorities": [
-        "Income Tax Department"
-      ],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
-      "profile_quality": "primary_source_backed",
-      "normative_act_count": 3
+      "iso2": "IN",
+      "profile_quality": "source_backed",
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Zimbabwe",
-      "iso3": "ZWE",
+      "country": "Algeria",
+      "iso3": "DZA",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Zimbabwe. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Zimbabwe. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Algeria. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Algeria. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1050,8 +820,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1083,22 +852,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "DZ",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Zambia",
-      "iso3": "ZMB",
+      "country": "Angola",
+      "iso3": "AGO",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Zambia. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Zambia. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Angola. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Angola. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1109,8 +880,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1142,22 +912,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "AO",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Uganda",
-      "iso3": "UGA",
+      "country": "Benin",
+      "iso3": "BEN",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Uganda. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Uganda. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Benin. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Benin. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1168,8 +940,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1201,22 +972,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "BJ",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Tunisia",
-      "iso3": "TUN",
+      "country": "Botswana",
+      "iso3": "BWA",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Tunisia. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Tunisia. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Botswana. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Botswana. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1227,8 +1000,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1260,22 +1032,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "BW",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Togo",
-      "iso3": "TGO",
+      "country": "Burkina Faso",
+      "iso3": "BFA",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Togo. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Togo. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Burkina Faso. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Burkina Faso. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1286,8 +1060,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1319,22 +1092,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "BF",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Tanzania",
-      "iso3": "TZA",
+      "country": "Burundi",
+      "iso3": "BDI",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Tanzania. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Tanzania. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Burundi. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Burundi. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1345,8 +1120,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1378,22 +1152,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "BI",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "Sudan",
-      "iso3": "SDN",
+      "country": "Cabo Verde",
+      "iso3": "CPV",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for Sudan. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de Sudan. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Cabo Verde. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Cabo Verde. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1404,8 +1180,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1437,22 +1212,24 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "CV",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     },
     {
-      "country": "South Sudan",
-      "iso3": "SSD",
+      "country": "Cameroon",
+      "iso3": "CMR",
       "region": "Africa",
       "trend": "mixed",
-      "summary_en": "Baseline comparative profile for South Sudan. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
-      "summary_pt": "Perfil comparativo preliminar de South Sudan. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+      "summary_en": "Baseline comparative profile for Cameroon. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+      "summary_pt": "Perfil comparativo preliminar de Cameroon. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
       "last_update": "2026-04-07",
       "criteria": {
         "legal_certainty": 10,
@@ -1463,8 +1240,7 @@
         "taxation": 4,
         "mining_infrastructure": 4,
         "innovation_openness": 4,
-        "anti_centralization": 2,
-        "defi": 3
+        "anti_centralization": 2
       },
       "status": {
         "exchanges": "uncertain",
@@ -1496,14 +1272,16 @@
       "score": 43,
       "classification": "restrictive",
       "thesis_core": false,
-      "primary_sources": [],
-      "authorities": [],
-      "defi_focus_en": "",
-      "defi_focus_pt": "",
-      "defi_signals_en": [],
-      "defi_signals_pt": [],
+      "iso2": "CM",
       "profile_quality": "preliminary",
-      "normative_act_count": 0
+      "primary_source_count": 0,
+      "themes_available": [
+        "exchanges",
+        "stablecoins",
+        "tokenization",
+        "cbdc",
+        "defi"
+      ]
     }
   ]
 }
