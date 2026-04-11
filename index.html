@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Regulation Atlas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/css/jsvectormap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar topbar-hero">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="eyebrow">Global regulatory intelligence</p>
+      <h1 data-i18n="title">Crypto Regulation Atlas</h1>
+      <p class="subtitle" data-i18n="subtitle">A comparative observatory of crypto regulation, stablecoins, tokenization, and CBDC policy.</p>
+      <p class="hero-note" id="hero-note">Global snapshot of crypto regulation with country profiles, criteria and interactive map.</p>
+    </div>
+    <div class="topbar-actions">
+      <div class="lang-switcher" aria-label="Language selector">
+        <button class="lang-btn" data-lang="pt" title="Português">🇧🇷</button>
+        <button class="lang-btn" data-lang="en" title="English">🇬🇧</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <nav class="section-nav card">
+      <a href="#overview-section" class="nav-link">Overview</a>
+      <a href="#criteria-section" class="nav-link">Criteria</a>
+      <a href="#map-section" class="nav-link">Map</a>
+      <a href="#country-panel" class="nav-link">Country</a>
+      <a href="#compare-section" class="nav-link">Compare</a>
+      <a href="#experiences-section" class="nav-link">Experiences</a>
+      <a href="#library-section" class="nav-link">Library</a>
+      <a href="#timeline-section" class="nav-link">Timeline</a>
+      <a href="#methodology-section" class="nav-link">Methodology</a>
+    </nav>
+
+    <section id="overview-section" class="stats-grid sprint1-grid">
+      <article class="card stat-card"><div class="label" id="kpi-jurisdictions-label">Jurisdictions mapped</div><div class="value" id="stat-jurisdictions">—</div></article>
+      <article class="card stat-card"><div class="label" id="kpi-avg-label">Average score</div><div class="value" id="stat-themes">—</div></article>
+      <article class="card stat-card"><div class="label" id="kpi-licensed-label">Licensed exchange regimes</div><div class="value" id="stat-licensed">—</div></article>
+      <article class="card stat-card"><div class="label" id="kpi-cbdc-label">CBDC programmes</div><div class="value" id="stat-cbdc">—</div></article>
+    </section>
+
+    <section class="controls-card focus-controls">
+      <div class="preset-bar">
+        <div>
+          <div class="preset-label" id="preset-label">Quick views</div>
+          <div class="preset-subtitle" id="preset-subtitle">Open a curated set of jurisdictions instantly.</div>
+        </div>
+        <div id="preset-buttons" class="preset-buttons"></div>
+      </div>
+
+      <div class="controls-grid sprint1-controls">
+        <div class="control control-search">
+          <label for="search-input" data-i18n="searchLabel">Search</label>
+          <input id="search-input" type="search" placeholder="Search a country" />
+        </div>
+
+        <div class="control">
+          <label for="region-filter" data-i18n="region">Region</label>
+          <select id="region-filter">
+            <option value="all" data-i18n="allRegions">All regions</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="trend-filter" data-i18n="trend">Trend</label>
+          <select id="trend-filter">
+            <option value="all" data-i18n="allTrends">All trends</option>
+            <option value="improving" data-i18n="improving">Improving</option>
+            <option value="stable" data-i18n="stable">Stable</option>
+            <option value="worsening" data-i18n="worsening">Worsening</option>
+            <option value="mixed" data-i18n="mixedTrend">Mixed</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="score-min" data-i18n="scoreMin">Minimum score</label>
+          <input id="score-min" type="range" min="0" max="100" step="5" value="0" />
+          <span id="score-min-value">0</span>
+        </div>
+
+        <div class="control">
+          <label for="topic-filter" data-i18n="topic">Topic</label>
+          <select id="topic-filter">
+            <option value="all" data-i18n="allTopics">All topics</option>
+            <option value="exchanges" data-i18n="exchanges">Exchanges</option>
+            <option value="stablecoins" data-i18n="stablecoins">Stablecoins</option>
+            <option value="tokenization" data-i18n="tokenization">Tokenization</option>
+            <option value="cbdc" data-i18n="cbdc">CBDC</option>
+            <option value="defi" data-i18n="defi">DeFi</option>
+          </select>
+        </div>
+
+        <div class="control control-actions">
+          <button id="reset-filters" class="button-secondary" data-i18n="resetFilters">Reset filters</button>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="map" data-i18n="mapView">Map view</button>
+            <button class="view-btn" data-view="table" data-i18n="tableView">Table view</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="criteria-section" class="criteria-section card">
+      <div class="card-header">
+        <h2 id="criteria-title">Core criteria</h2>
+        <p class="section-intro" id="criteria-intro">The Atlas score is built from legal certainty, innovation openness, licensing, stablecoins, tokenization, taxation, mining infrastructure and decentralization risk.</p>
+      </div>
+      <div id="criteria-grid" class="criteria-grid"></div>
+    </section>
+
+    <section class="content-grid sprint1-content">
+      <div class="main-panel">
+        <section id="map-section" class="map-card card">
+          <div class="card-header">
+            <div>
+              <h2 data-i18n="mapTitle">Global map</h2>
+              <p id="metadata"></p>
+            </div>
+          </div>
+          <div id="world-map"></div>
+          <div class="legend">
+            <span class="legend-item"><i style="background:#14532d"></i><span data-i18n="legendVeryFavorable">80–100 Very favorable</span></span>
+            <span class="legend-item"><i style="background:#16a34a"></i><span data-i18n="legendFavorable">65–79 Favorable</span></span>
+            <span class="legend-item"><i style="background:#eab308"></i><span data-i18n="legendMixed">50–64 Mixed</span></span>
+            <span class="legend-item"><i style="background:#f97316"></i><span data-i18n="legendRestrictive">35–49 Restrictive</span></span>
+            <span class="legend-item"><i style="background:#b91c1c"></i><span data-i18n="legendVeryRestrictive">0–34 Very restrictive</span></span>
+          </div>
+          <div id="map-coverage-note" class="map-coverage-note"></div>
+          <div id="map-marker-list" class="map-marker-list"></div>
+        </section>
+
+        <section id="table-section" class="card hidden">
+          <div class="card-header">
+            <h2 data-i18n="tableTitle">Countries table</h2>
+          </div>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th data-i18n="country">Country</th>
+                  <th data-i18n="region">Region</th>
+                  <th data-i18n="score">Score</th>
+                  <th data-i18n="classification">Classification</th>
+                  <th data-i18n="trend">Trend</th>
+                </tr>
+              </thead>
+              <tbody id="countries-table-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sidebar sprint1-sidebar">
+        <section class="card detail-card country-card" id="country-panel">
+          <div class="empty-state">
+            <h2 data-i18n="selectCountry">Select a country</h2>
+            <p data-i18n="selectCountryHelp">Click a country on the map or choose one in the table to inspect its regulatory profile.</p>
+          </div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="cards-row secondary-section">
+      <section class="card updates-card">
+        <div class="card-header"><h3 data-i18n="latestUpdates">Latest updates</h3></div>
+        <ul id="latest-updates"></ul>
+      </section>
+
+      <section class="card signals-card">
+        <div class="cards-row inner-signals">
+          <section class="card small-card compact-card">
+            <div class="card-header"><h3 data-i18n="topFavorable">Top 10 favorable</h3></div>
+            <ol id="top-favorable"></ol>
+          </section>
+          <section class="card small-card compact-card">
+            <div class="card-header"><h3 data-i18n="topRestrictive">Top 10 restrictive</h3></div>
+            <ol id="top-restrictive"></ol>
+          </section>
+        </div>
+      </section>
+    </section>
+
+    <section id="compare-section" class="card compare-section secondary-section">
+      <div class="card-header"><h2 data-i18n="compareTitle">Compare jurisdictions</h2></div>
+      <div class="compare-controls">
+        <div class="control"><label for="compare-a" data-i18n="jurisdictionA">Jurisdiction A</label><select id="compare-a"></select></div>
+        <div class="control"><label for="compare-b" data-i18n="jurisdictionB">Jurisdiction B</label><select id="compare-b"></select></div>
+      </div>
+      <div class="table-wrapper compare-wrapper"><table class="compare-table"><tbody id="compare-body"></tbody></table></div>
+    </section>
+
+    <section id="experiences-section" class="card experiences-section secondary-section">
+      <div class="card-header"><h2 id="experiences-title">Regulatory experiences</h2><div class="section-tools">
+        <div class="control compact-control"><label for="experience-filter">Filter</label><select id="experience-filter"><option value="all">All</option><option value="thesis">Thesis core</option><option value="emerging">EMDE focus</option><option value="implementation">Implementation</option><option value="data">Data & supervision</option></select></div>
+      </div></div>
+      <div id="experiences-grid" class="experiences-grid"></div>
+    </section>
+
+    <section id="themes-section" class="card themes-section secondary-section">
+      <div class="card-header"><h2 data-i18n="themesTitle">Thematic pillars</h2></div>
+      <div id="themes-grid" class="themes-grid"></div>
+    </section>
+
+    <section id="library-section" class="card library-section secondary-section">
+      <div class="card-header"><h2 id="library-title">Research base</h2><div class="section-tools">
+        <div class="control compact-control"><label for="library-filter">Publisher</label><select id="library-filter"></select></div>
+        <div class="control compact-control"><label for="library-theme-filter">Theme</label><select id="library-theme-filter"></select></div>
+        <div class="control compact-control"><label for="library-jurisdiction-filter">Jurisdiction</label><select id="library-jurisdiction-filter"></select></div>
+      </div></div>
+      <p class="section-intro" id="library-intro">Source pack curated for thesis development, comparative legal analysis and regulatory monitoring.</p>
+      <div id="library-grid" class="library-grid"></div>
+    </section>
+
+    <section id="timeline-section" class="card timeline-card secondary-section">
+      <div class="card-header"><h2 id="timeline-title">Regulatory timeline</h2><div class="section-tools">
+        <div class="control compact-control"><label for="timeline-jurisdiction-filter">Jurisdiction</label><select id="timeline-jurisdiction-filter"></select></div>
+        <div class="control compact-control"><label for="timeline-year-filter">Year</label><select id="timeline-year-filter"></select></div>
+        <div class="control compact-control"><label for="timeline-category-filter">Category</label><select id="timeline-category-filter"></select></div>
+      </div></div>
+      <div id="timeline-summary" class="timeline-summary"></div>
+      <div id="timeline-list"></div>
+    </section>
+
+    <section id="methodology-section" class="card methodology-card secondary-section">
+      <div class="card-header"><h2 data-i18n="methodologyTitle">Methodology</h2></div>
+      <p data-i18n="methodologyP1">The Atlas uses a weighted additive multicriteria score...</p>
+      <p data-i18n="methodologyP2">Scores are anchored to explicit levels...</p>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <aside id="drawer" class="drawer hidden" aria-hidden="true">
+    <div class="drawer-header">
+      <h2 id="drawer-title">Details</h2>
+      <button id="drawer-close" class="button-secondary">Close</button>
+    </div>
+    <div id="drawer-content" class="drawer-content"></div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/js/jsvectormap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.6.0/dist/maps/world.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
