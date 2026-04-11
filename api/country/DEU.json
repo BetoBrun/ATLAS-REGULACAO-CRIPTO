@@ -1,0 +1,75 @@
+{
+  "country": "Germany",
+  "iso3": "DEU",
+  "region": "Europe",
+  "trend": "stable",
+  "summary_en": "Germany benefits from EU-level legal certainty under MiCA and strong financial regulation, though compliance can be costly.",
+  "summary_pt": "A Alemanha se beneficia da segurança jurídica em nível europeu sob o MiCA e de uma forte regulação financeira, embora o compliance possa ser custoso.",
+  "last_update": "2026-03-25",
+  "criteria": {
+    "legal_certainty": 17,
+    "proportionality": 10,
+    "exchanges": 8,
+    "stablecoins": 7,
+    "tokenization": 8,
+    "taxation": 6,
+    "mining_infrastructure": 4,
+    "innovation_openness": 7,
+    "anti_centralization": 3,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "regulated under MiCA",
+    "tokenization": "active",
+    "taxation": "moderate friction",
+    "mining": "limited",
+    "cbdc": "euro area exploration",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "MiCA",
+    "German banking supervision rules"
+  ],
+  "opportunities_en": [
+    "Regulated tokenization",
+    "Institutional adoption"
+  ],
+  "opportunities_pt": [
+    "Tokenização regulada",
+    "Adoção institucional"
+  ],
+  "risks_en": [
+    "High compliance cost"
+  ],
+  "risks_pt": [
+    "Alto custo de compliance"
+  ],
+  "references": [
+    {
+      "label": "BaFin",
+      "url": "https://www.bafin.de/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 70,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "BaFin MiCAR portal",
+      "authority": "BaFin",
+      "url": "https://www.bafin.de/EN/Aufsicht/FinTech/Kryptowerte/MiCAR/micar_node_en.html",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "BaFin"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

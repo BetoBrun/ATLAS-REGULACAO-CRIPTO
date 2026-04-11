@@ -1,0 +1,83 @@
+{
+  "country": "Argentina",
+  "iso3": "ARG",
+  "region": "Latin America",
+  "trend": "improving",
+  "summary_en": "Argentina shows high social adoption and entrepreneurial activity, but macroeconomic instability and regulatory uncertainty remain relevant risks.",
+  "summary_pt": "A Argentina apresenta alta adoção social e atividade empreendedora, mas a instabilidade macroeconômica e a incerteza regulatória ainda são riscos relevantes.",
+  "last_update": "2026-03-19",
+  "criteria": {
+    "legal_certainty": 9,
+    "proportionality": 9,
+    "exchanges": 7,
+    "stablecoins": 6,
+    "tokenization": 5,
+    "taxation": 5,
+    "mining_infrastructure": 6,
+    "innovation_openness": 8,
+    "anti_centralization": 4,
+    "defi": 4
+  },
+  "status": {
+    "exchanges": "operating",
+    "stablecoins": "widely used",
+    "tokenization": "developing",
+    "taxation": "uncertain",
+    "mining": "moderate",
+    "cbdc": "unclear",
+    "defi": "uncertain"
+  },
+  "laws": [
+    "Tax and reporting measures",
+    "Central bank restrictions history"
+  ],
+  "opportunities_en": [
+    "Stablecoin demand",
+    "Entrepreneurial adoption"
+  ],
+  "opportunities_pt": [
+    "Demanda por stablecoins",
+    "Adoção empreendedora"
+  ],
+  "risks_en": [
+    "Macroeconomic instability"
+  ],
+  "risks_pt": [
+    "Instabilidade macroeconômica"
+  ],
+  "references": [
+    {
+      "label": "BCRA",
+      "url": "https://www.bcra.gob.ar/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 59,
+  "classification": "mixed",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "UIF 49/2024 for PSAVs",
+      "authority": "UIF Argentina",
+      "url": "https://www.argentina.gob.ar/noticias/normativa-uif-para-proveedores-de-servicios-de-activos-virtuales",
+      "year": 2024
+    },
+    {
+      "type": "regulator",
+      "title": "CNV PSAV register",
+      "authority": "CNV Argentina",
+      "url": "https://www.argentina.gob.ar/cnv",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "UIF",
+    "CNV"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

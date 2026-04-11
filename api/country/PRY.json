@@ -1,0 +1,75 @@
+{
+  "country": "Paraguay",
+  "iso3": "PRY",
+  "region": "Latin America",
+  "trend": "stable",
+  "summary_en": "Paraguay has abundant energy and mining potential, but its legal treatment of crypto remains fragmented and less institutionally mature.",
+  "summary_pt": "O Paraguai possui energia abundante e potencial para mineração, mas o tratamento jurídico dos criptoativos permanece fragmentado e menos maduro institucionalmente.",
+  "last_update": "2026-03-18",
+  "criteria": {
+    "legal_certainty": 8,
+    "proportionality": 8,
+    "exchanges": 5,
+    "stablecoins": 3,
+    "tokenization": 3,
+    "taxation": 6,
+    "mining_infrastructure": 8,
+    "innovation_openness": 6,
+    "anti_centralization": 4,
+    "defi": 3
+  },
+  "status": {
+    "exchanges": "fragmented",
+    "stablecoins": "unclear",
+    "tokenization": "incipient",
+    "taxation": "developing reporting rules",
+    "mining": "potentially favorable",
+    "cbdc": "not central",
+    "defi": "uncertain"
+  },
+  "laws": [
+    "Tax reporting measures",
+    "Central bank warnings"
+  ],
+  "opportunities_en": [
+    "Mining",
+    "Low-cost energy"
+  ],
+  "opportunities_pt": [
+    "Mineração",
+    "Energia de baixo custo"
+  ],
+  "risks_en": [
+    "Weak legal certainty"
+  ],
+  "risks_pt": [
+    "Baixa segurança jurídica"
+  ],
+  "references": [
+    {
+      "label": "BCP",
+      "url": "https://www.bcp.gov.py/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 51,
+  "classification": "mixed",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "BCP virtual currencies communication",
+      "authority": "BCP",
+      "url": "https://www.bcp.gov.py/es/web/institucional/w/criptomonedas-privadas-y-monedas-digitales",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "BCP"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

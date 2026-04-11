@@ -1,0 +1,83 @@
+{
+  "country": "Canada",
+  "iso3": "CAN",
+  "region": "North America",
+  "trend": "stable",
+  "summary_en": "Canada has comparatively strong exchange oversight and mature market institutions, though innovation can face meaningful compliance burdens.",
+  "summary_pt": "O Canadá possui supervisão relativamente forte de exchanges e instituições de mercado maduras, embora a inovação possa enfrentar ônus relevantes de compliance.",
+  "last_update": "2026-03-09",
+  "criteria": {
+    "legal_certainty": 15,
+    "proportionality": 10,
+    "exchanges": 8,
+    "stablecoins": 6,
+    "tokenization": 7,
+    "taxation": 6,
+    "mining_infrastructure": 8,
+    "innovation_openness": 7,
+    "anti_centralization": 4,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "cautious",
+    "tokenization": "developing",
+    "taxation": "moderate",
+    "mining": "favorable in some provinces",
+    "cbdc": "research",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "CSA guidance",
+    "FINTRAC rules"
+  ],
+  "opportunities_en": [
+    "Institutional markets",
+    "Mining"
+  ],
+  "opportunities_pt": [
+    "Mercados institucionais",
+    "Mineração"
+  ],
+  "risks_en": [
+    "Provincial complexity"
+  ],
+  "risks_pt": [
+    "Complexidade provincial"
+  ],
+  "references": [
+    {
+      "label": "CSA",
+      "url": "https://www.securities-administrators.ca/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 71,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "FINTRAC virtual currency guidance",
+      "authority": "FINTRAC",
+      "url": "https://fintrac-canafe.canada.ca/guidance-directives/transaction-operation/lvctr/lvctr-eng",
+      "year": 2024
+    },
+    {
+      "type": "regulator",
+      "title": "CSA staff notices on crypto assets",
+      "authority": "CSA",
+      "url": "https://www.securities-administrators.ca/",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "CSA",
+    "FINTRAC"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

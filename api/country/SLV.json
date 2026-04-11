@@ -1,0 +1,77 @@
+{
+  "country": "El Salvador",
+  "iso3": "SLV",
+  "region": "Latin America",
+  "trend": "stable",
+  "summary_en": "El Salvador remains symbolically important for crypto policy, with an institutional digital asset regime despite reforms to Bitcoin’s legal-tender status.",
+  "summary_pt": "El Salvador permanece simbolicamente importante para a política cripto, com um regime institucional de ativos digitais apesar das reformas no status do Bitcoin como moeda de curso legal.",
+  "last_update": "2026-03-15",
+  "criteria": {
+    "legal_certainty": 12,
+    "proportionality": 10,
+    "exchanges": 7,
+    "stablecoins": 6,
+    "tokenization": 8,
+    "taxation": 8,
+    "mining_infrastructure": 5,
+    "innovation_openness": 9,
+    "anti_centralization": 3,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "specialized framework",
+    "stablecoins": "possible",
+    "tokenization": "open",
+    "taxation": "favorable",
+    "mining": "neutral",
+    "cbdc": "not central",
+    "defi": "open experimental environment"
+  },
+  "laws": [
+    "Digital Assets Issuance Law",
+    "Bitcoin Law reforms"
+  ],
+  "opportunities_en": [
+    "Digital asset issuance",
+    "Policy experimentation"
+  ],
+  "opportunities_pt": [
+    "Emissão de ativos digitais",
+    "Experimentação regulatória"
+  ],
+  "risks_en": [
+    "Country risk",
+    "Policy volatility"
+  ],
+  "risks_pt": [
+    "Risco-país",
+    "Volatilidade de política"
+  ],
+  "references": [
+    {
+      "label": "CNAD",
+      "url": "https://cnad.gob.sv/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 68,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "CNAD official portal",
+      "authority": "CNAD",
+      "url": "https://cnad.gob.sv/",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "CNAD"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

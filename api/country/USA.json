@@ -1,0 +1,103 @@
+{
+  "country": "United States",
+  "iso3": "USA",
+  "region": "North America",
+  "trend": "improving",
+  "summary_en": "The United States combines fragmented federal oversight with strong market depth. Stablecoin policy became more structured, but securities-law uncertainty still affects some projects.",
+  "summary_pt": "Os Estados Unidos combinam supervisão federal fragmentada com grande profundidade de mercado. A política para stablecoins ficou mais estruturada, mas a incerteza em matéria de valores mobiliários ainda afeta parte dos projetos.",
+  "last_update": "2026-03-28",
+  "criteria": {
+    "legal_certainty": 15,
+    "proportionality": 11,
+    "exchanges": 7,
+    "stablecoins": 8,
+    "tokenization": 8,
+    "taxation": 7,
+    "mining_infrastructure": 9,
+    "innovation_openness": 9,
+    "anti_centralization": 4,
+    "defi": 7
+  },
+  "status": {
+    "exchanges": "regulated with litigation risk",
+    "stablecoins": "developing framework",
+    "tokenization": "active",
+    "taxation": "moderate",
+    "mining": "favorable in several states",
+    "cbdc": "research only",
+    "defi": "active enforcement and indirect treatment"
+  },
+  "laws": [
+    "GENIUS Act (2025)",
+    "State-level digital asset laws",
+    "Federal agency guidance"
+  ],
+  "opportunities_en": [
+    "Stablecoins",
+    "Tokenized capital markets",
+    "Mining and compute"
+  ],
+  "opportunities_pt": [
+    "Stablecoins",
+    "Mercados de capitais tokenizados",
+    "Mineração e computação"
+  ],
+  "risks_en": [
+    "Regulatory fragmentation",
+    "Enforcement uncertainty"
+  ],
+  "risks_pt": [
+    "Fragmentação regulatória",
+    "Incerteza de enforcement"
+  ],
+  "references": [
+    {
+      "label": "White House fact sheet",
+      "url": "https://www.whitehouse.gov/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 78,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "SEC Crypto Assets and Cyber Unit",
+      "authority": "SEC",
+      "url": "https://www.sec.gov/spotlight/cybersecurity-enforcement-actions",
+      "year": 2024
+    },
+    {
+      "type": "regulator",
+      "title": "CFTC Digital Assets",
+      "authority": "CFTC",
+      "url": "https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/DigitalAssets",
+      "year": 2024
+    },
+    {
+      "type": "regulator",
+      "title": "FinCEN Convertible Virtual Currency guidance",
+      "authority": "FinCEN",
+      "url": "https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-certain-business-models",
+      "year": 2019
+    }
+  ],
+  "authorities": [
+    "SEC",
+    "CFTC",
+    "FinCEN",
+    "state regulators"
+  ],
+  "defi_focus_en": "US DeFi is shaped by enforcement, commodities and securities law, and AML theories applied to interfaces and affiliated actors.",
+  "defi_focus_pt": "O DeFi nos EUA é moldado por enforcement, direito de commodities e valores mobiliários e teorias AML aplicadas a interfaces e atores afiliados.",
+  "defi_signals_en": [
+    "Strong enforcement risk for front ends and promoters",
+    "Protocol neutrality remains legally uncertain"
+  ],
+  "defi_signals_pt": [
+    "Alto risco de enforcement para front-ends e promotores",
+    "A neutralidade do protocolo permanece juridicamente incerta"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 6
+}

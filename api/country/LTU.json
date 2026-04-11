@@ -1,0 +1,59 @@
+{
+  "country": "Lithuania",
+  "iso3": "LTU",
+  "region": "Europe",
+  "trend": "stable",
+  "summary_en": "Baseline comparative profile for Lithuania. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+  "summary_pt": "Perfil comparativo preliminar de Lithuania. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+  "last_update": "2026-04-07",
+  "criteria": {
+    "legal_certainty": 11,
+    "proportionality": 8,
+    "exchanges": 6,
+    "stablecoins": 6,
+    "tokenization": 6,
+    "taxation": 6,
+    "mining_infrastructure": 6,
+    "innovation_openness": 6,
+    "anti_centralization": 3,
+    "defi": 4
+  },
+  "status": {
+    "exchanges": "developing framework",
+    "stablecoins": "uncertain",
+    "tokenization": "developing",
+    "taxation": "moderate",
+    "mining": "allowed with friction",
+    "cbdc": "research",
+    "defi": "uncertain"
+  },
+  "laws": [],
+  "opportunities_en": [
+    "Expand official-source review",
+    "Refine classification by activity",
+    "Add tax and AML detail"
+  ],
+  "opportunities_pt": [
+    "Ampliar revisão com fontes oficiais",
+    "Refinar classificação por atividade",
+    "Adicionar detalhe tributário e AML"
+  ],
+  "risks_en": [
+    "Preliminary profile may change after source audit"
+  ],
+  "risks_pt": [
+    "O perfil preliminar pode mudar após auditoria das fontes"
+  ],
+  "references": [],
+  "score": 58,
+  "classification": "mixed",
+  "thesis_core": false,
+  "primary_sources": [],
+  "authorities": [],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "preliminary",
+  "normative_act_count": 0
+}

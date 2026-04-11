@@ -1,0 +1,88 @@
+{
+  "country": "United Kingdom",
+  "iso3": "GBR",
+  "region": "Europe",
+  "trend": "improving",
+  "summary_en": "The UK is moving toward a tailored regime for stablecoins, digital securities and broader crypto activities, but implementation remains gradual.",
+  "summary_pt": "O Reino Unido caminha para um regime específico para stablecoins, valores mobiliários digitais e atividades cripto em geral, mas a implementação segue gradual.",
+  "last_update": "2026-03-20",
+  "criteria": {
+    "legal_certainty": 16,
+    "proportionality": 11,
+    "exchanges": 8,
+    "stablecoins": 8,
+    "tokenization": 8,
+    "taxation": 6,
+    "mining_infrastructure": 5,
+    "innovation_openness": 8,
+    "anti_centralization": 4,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "developing framework",
+    "tokenization": "sandboxing",
+    "taxation": "moderate",
+    "mining": "neutral",
+    "cbdc": "consultation stage",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "FCA crypto regime",
+    "Digital Securities Sandbox"
+  ],
+  "opportunities_en": [
+    "Tokenized securities",
+    "Regulatory experimentation"
+  ],
+  "opportunities_pt": [
+    "Valores mobiliários tokenizados",
+    "Experimentação regulatória"
+  ],
+  "risks_en": [
+    "Slow implementation"
+  ],
+  "risks_pt": [
+    "Implementação lenta"
+  ],
+  "references": [
+    {
+      "label": "Bank of England",
+      "url": "https://www.bankofengland.co.uk/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 74,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "FCA cryptoasset registration regime",
+      "authority": "FCA",
+      "url": "https://www.fca.org.uk/firms/financial-crime/cryptoassets-registration",
+      "year": 2024
+    },
+    {
+      "type": "policy",
+      "title": "UK cryptoasset regulatory approach",
+      "authority": "HM Treasury",
+      "url": "https://www.gov.uk/government/collections/cryptoassets",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "FCA",
+    "HM Treasury",
+    "Bank of England"
+  ],
+  "defi_focus_en": "The UK increasingly regulates crypto activity through financial promotions, AML registration and future perimeter reform, but does not yet offer a dedicated DeFi regime.",
+  "defi_focus_pt": "O Reino Unido regula crescentemente a atividade cripto por promoções financeiras, registro AML e futura reforma de perímetro, mas ainda não oferece regime dedicado para DeFi.",
+  "defi_signals_en": [
+    "Front ends and promotions are sensitive regulatory points"
+  ],
+  "defi_signals_pt": [
+    "Front-ends e promoções financeiras são pontos sensíveis"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

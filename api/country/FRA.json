@@ -1,0 +1,73 @@
+{
+  "country": "France",
+  "iso3": "FRA",
+  "region": "Europe",
+  "trend": "stable",
+  "summary_en": "France combines early digital asset licensing experience with the broader MiCA framework, offering clarity but significant compliance obligations.",
+  "summary_pt": "A França combina experiência precoce em licenciamento de ativos digitais com o quadro mais amplo do MiCA, oferecendo clareza, porém com obrigações relevantes de compliance.",
+  "last_update": "2026-03-24",
+  "criteria": {
+    "legal_certainty": 17,
+    "proportionality": 9,
+    "exchanges": 8,
+    "stablecoins": 7,
+    "tokenization": 8,
+    "taxation": 6,
+    "mining_infrastructure": 4,
+    "innovation_openness": 7,
+    "anti_centralization": 3,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "regulated under MiCA",
+    "tokenization": "active",
+    "taxation": "moderate friction",
+    "mining": "limited",
+    "cbdc": "euro area exploration",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "MiCA",
+    "PSAN regime"
+  ],
+  "opportunities_en": [
+    "Institutional market entry"
+  ],
+  "opportunities_pt": [
+    "Entrada de mercado institucional"
+  ],
+  "risks_en": [
+    "Regulatory cost"
+  ],
+  "risks_pt": [
+    "Custo regulatório"
+  ],
+  "references": [
+    {
+      "label": "AMF France",
+      "url": "https://www.amf-france.org/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 69,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "AMF MiCA transition information",
+      "authority": "AMF",
+      "url": "https://www.amf-france.org/en/news-publications/news-releases/amf-news-releases/mica-amf-recalls-rules-applicable-psans-during-transition-period",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "AMF"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

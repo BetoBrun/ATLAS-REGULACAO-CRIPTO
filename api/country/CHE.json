@@ -1,0 +1,88 @@
+{
+  "country": "Switzerland",
+  "iso3": "CHE",
+  "region": "Europe",
+  "trend": "stable",
+  "summary_en": "Switzerland remains one of the strongest jurisdictions for tokenization, DLT trading infrastructure and legal certainty for crypto businesses.",
+  "summary_pt": "A Suíça continua sendo uma das jurisdições mais fortes para tokenização, infraestrutura de negociação em DLT e segurança jurídica para negócios cripto.",
+  "last_update": "2026-03-26",
+  "criteria": {
+    "legal_certainty": 18,
+    "proportionality": 13,
+    "exchanges": 9,
+    "stablecoins": 8,
+    "tokenization": 10,
+    "taxation": 8,
+    "mining_infrastructure": 6,
+    "innovation_openness": 9,
+    "anti_centralization": 4,
+    "defi": 8
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "open with compliance",
+    "tokenization": "highly favorable",
+    "taxation": "competitive",
+    "mining": "moderate",
+    "cbdc": "wholesale focus",
+    "defi": "comparatively open with functional analysis"
+  },
+  "laws": [
+    "Swiss DLT Act",
+    "FINMA guidance"
+  ],
+  "opportunities_en": [
+    "DLT markets",
+    "Custody",
+    "Tokenized securities"
+  ],
+  "opportunities_pt": [
+    "Mercados DLT",
+    "Custódia",
+    "Valores mobiliários tokenizados"
+  ],
+  "risks_en": [
+    "Cost of operation"
+  ],
+  "risks_pt": [
+    "Custo operacional"
+  ],
+  "references": [
+    {
+      "label": "Swiss DLT Framework",
+      "url": "https://www.sif.admin.ch/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 85,
+  "classification": "very_favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "FINMA guidance on stablecoins and DLT",
+      "authority": "FINMA",
+      "url": "https://www.finma.ch/en/news/2024/07/20240726-mm-stablecoins/",
+      "year": 2024
+    },
+    {
+      "type": "law",
+      "title": "DLT Act framework",
+      "authority": "Swiss Confederation",
+      "url": "https://www.fedlex.admin.ch/eli/cc/2021/33/en",
+      "year": 2021
+    }
+  ],
+  "authorities": [
+    "FINMA"
+  ],
+  "defi_focus_en": "Switzerland offers one of the more functionally sophisticated environments, though DeFi still depends on activity analysis rather than a standalone code.",
+  "defi_focus_pt": "A Suíça oferece um dos ambientes funcionalmente mais sofisticados, embora DeFi ainda dependa de análise por atividade e não de um código autônomo.",
+  "defi_signals_en": [
+    "Functional approach supports innovation with supervision"
+  ],
+  "defi_signals_pt": [
+    "A abordagem funcional apoia inovação com supervisão"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

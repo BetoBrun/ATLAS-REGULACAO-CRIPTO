@@ -1,0 +1,65 @@
+{
+  "country": "Chile",
+  "iso3": "CHL",
+  "region": "Latin America",
+  "trend": "improving",
+  "summary_en": "Chile benefits from relatively stable institutions and strong digital infrastructure potential, though its crypto framework remains incremental.",
+  "summary_pt": "O Chile se beneficia de instituições relativamente estáveis e forte potencial de infraestrutura digital, embora seu marco para criptoativos ainda avance de forma incremental.",
+  "last_update": "2026-03-16",
+  "criteria": {
+    "legal_certainty": 11,
+    "proportionality": 10,
+    "exchanges": 6,
+    "stablecoins": 5,
+    "tokenization": 5,
+    "taxation": 6,
+    "mining_infrastructure": 7,
+    "innovation_openness": 7,
+    "anti_centralization": 4,
+    "defi": 3
+  },
+  "status": {
+    "exchanges": "operating",
+    "stablecoins": "partially open",
+    "tokenization": "developing",
+    "taxation": "moderate",
+    "mining": "potentially favorable",
+    "cbdc": "research",
+    "defi": "uncertain"
+  },
+  "laws": [
+    "Fintech Law",
+    "Central bank studies"
+  ],
+  "opportunities_en": [
+    "Infrastructure",
+    "Institutional clarity"
+  ],
+  "opportunities_pt": [
+    "Infraestrutura",
+    "Clareza institucional"
+  ],
+  "risks_en": [
+    "Limited crypto-specific regulation"
+  ],
+  "risks_pt": [
+    "Regulação cripto específica limitada"
+  ],
+  "references": [
+    {
+      "label": "CMF Chile",
+      "url": "https://www.cmfchile.cl/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 61,
+  "classification": "mixed",
+  "primary_sources": [],
+  "authorities": [],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "source_backed",
+  "normative_act_count": 2
+}

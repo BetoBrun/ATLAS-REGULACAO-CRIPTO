@@ -1,0 +1,109 @@
+{
+  "country": "Brazil",
+  "iso3": "BRA",
+  "region": "Latin America",
+  "trend": "improving",
+  "summary_en": "Brazil has a developing but increasingly structured framework for virtual asset service providers, with progress in prudential oversight but remaining friction in taxation and tokenization.",
+  "summary_pt": "O Brasil possui um arcabouço em desenvolvimento, porém cada vez mais estruturado, para prestadores de serviços de ativos virtuais, com avanço na supervisão prudencial, mas ainda com fricções em tributação e tokenização.",
+  "last_update": "2026-03-30",
+  "criteria": {
+    "legal_certainty": 14,
+    "proportionality": 10,
+    "exchanges": 8,
+    "stablecoins": 6,
+    "tokenization": 7,
+    "taxation": 6,
+    "mining_infrastructure": 8,
+    "innovation_openness": 7,
+    "anti_centralization": 3,
+    "defi": 5
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "partially open",
+    "tokenization": "developing",
+    "taxation": "moderate friction",
+    "mining": "potentially favorable",
+    "cbdc": "pilot under debate",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "Law 14.478/2022",
+    "Decree 11.563/2023",
+    "BCB Resolution 520/2025"
+  ],
+  "opportunities_en": [
+    "Tokenization",
+    "Green digital infrastructure",
+    "Stablecoin development"
+  ],
+  "opportunities_pt": [
+    "Tokenização",
+    "Infraestrutura digital verde",
+    "Desenvolvimento de stablecoins"
+  ],
+  "risks_en": [
+    "Tax uncertainty",
+    "Institutional fragmentation"
+  ],
+  "risks_pt": [
+    "Incerteza tributária",
+    "Fragmentação institucional"
+  ],
+  "references": [
+    {
+      "label": "Official framework",
+      "url": "https://www.planalto.gov.br/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 69,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "law",
+      "title": "Lei 14.478/2022",
+      "authority": "Congresso Nacional",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm",
+      "year": 2022
+    },
+    {
+      "type": "decree",
+      "title": "Decreto 11.563/2023",
+      "authority": "Presidência da República",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/decreto/d11563.htm",
+      "year": 2023
+    },
+    {
+      "type": "regulator",
+      "title": "BCB ativos virtuais",
+      "authority": "Banco Central do Brasil",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/criptoativos",
+      "year": 2024
+    },
+    {
+      "type": "regulator",
+      "title": "CVM orientações sobre criptoativos",
+      "authority": "CVM",
+      "url": "https://www.gov.br/cvm/pt-br",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "Banco Central do Brasil",
+    "CVM",
+    "Receita Federal"
+  ],
+  "defi_focus_en": "Brazil is moving toward clearer regulation of service providers, while DeFi remains mostly treated through indirect legal categories and policy debate.",
+  "defi_focus_pt": "O Brasil avança na regulação de prestadores de serviços, enquanto DeFi ainda é tratado sobretudo por categorias jurídicas indiretas e debate regulatório.",
+  "defi_signals_en": [
+    "No dedicated DeFi statute yet",
+    "Likely indirect treatment via VASP, securities and payments law"
+  ],
+  "defi_signals_pt": [
+    "Ainda sem estatuto específico de DeFi",
+    "Tratamento provável por VASP, valores mobiliários e pagamentos"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 7
+}
