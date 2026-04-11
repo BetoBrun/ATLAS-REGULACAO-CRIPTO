@@ -1,0 +1,86 @@
+{
+  "country": "Japan",
+  "iso3": "JPN",
+  "region": "Asia",
+  "trend": "stable",
+  "summary_en": "Japan offers high legal certainty and a mature exchange regime, though compliance remains demanding and innovation can move more slowly.",
+  "summary_pt": "O Japão oferece alta segurança jurídica e um regime maduro para exchanges, embora o compliance permaneça exigente e a inovação possa avançar mais lentamente.",
+  "last_update": "2026-03-13",
+  "criteria": {
+    "legal_certainty": 17,
+    "proportionality": 10,
+    "exchanges": 9,
+    "stablecoins": 7,
+    "tokenization": 7,
+    "taxation": 5,
+    "mining_infrastructure": 4,
+    "innovation_openness": 7,
+    "anti_centralization": 4,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "licensed",
+    "stablecoins": "regulated",
+    "tokenization": "active",
+    "taxation": "moderate friction",
+    "mining": "limited",
+    "cbdc": "research",
+    "defi": "cautious indirect treatment"
+  },
+  "laws": [
+    "Payment Services Act",
+    "FSA guidance"
+  ],
+  "opportunities_en": [
+    "Institutional trust",
+    "Stablecoins"
+  ],
+  "opportunities_pt": [
+    "Confiança institucional",
+    "Stablecoins"
+  ],
+  "risks_en": [
+    "High compliance burden"
+  ],
+  "risks_pt": [
+    "Alto ônus de compliance"
+  ],
+  "references": [
+    {
+      "label": "JFSA",
+      "url": "https://www.fsa.go.jp/en/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 70,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "law",
+      "title": "Payment Services Act",
+      "authority": "Japan FSA",
+      "url": "https://www.fsa.go.jp/en/refer/acts/index.html",
+      "year": 2017
+    },
+    {
+      "type": "regulator",
+      "title": "Registered crypto-asset exchange service providers",
+      "authority": "Japan FSA",
+      "url": "https://www.fsa.go.jp/en/regulated/licensed/en_kasoutuka.pdf",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "Japan FSA"
+  ],
+  "defi_focus_en": "Japan has mature rules for intermediaries and tokens but remains cautious on DeFi, which is mostly analysed through adjacent categories.",
+  "defi_focus_pt": "O Japão possui regras maduras para intermediários e tokens, mas segue cauteloso com DeFi, que é analisado principalmente por categorias adjacentes.",
+  "defi_signals_en": [
+    "Intermediary clarity exceeds protocol clarity"
+  ],
+  "defi_signals_pt": [
+    "A clareza sobre intermediários supera a clareza sobre protocolos"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

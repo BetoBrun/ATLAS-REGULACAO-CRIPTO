@@ -1,0 +1,73 @@
+{
+  "country": "India",
+  "iso3": "IND",
+  "region": "Asia",
+  "trend": "mixed",
+  "summary_en": "India combines a very large user base with heavy taxation and still-evolving policy, creating a mixed environment for crypto business formation.",
+  "summary_pt": "A Índia combina uma base muito grande de usuários com tributação pesada e política ainda em evolução, criando um ambiente misto para a formação de negócios cripto.",
+  "last_update": "2026-03-14",
+  "criteria": {
+    "legal_certainty": 8,
+    "proportionality": 4,
+    "exchanges": 5,
+    "stablecoins": 4,
+    "tokenization": 4,
+    "taxation": 2,
+    "mining_infrastructure": 5,
+    "innovation_openness": 6,
+    "anti_centralization": 2,
+    "defi": 3
+  },
+  "status": {
+    "exchanges": "allowed with friction",
+    "stablecoins": "uncertain",
+    "tokenization": "limited",
+    "taxation": "heavy",
+    "mining": "mixed",
+    "cbdc": "retail pilot",
+    "defi": "tax-heavy uncertain treatment"
+  },
+  "laws": [
+    "Tax provisions",
+    "RBI digital rupee pilot"
+  ],
+  "opportunities_en": [
+    "Large domestic market"
+  ],
+  "opportunities_pt": [
+    "Grande mercado doméstico"
+  ],
+  "risks_en": [
+    "Punitive taxation"
+  ],
+  "risks_pt": [
+    "Tributação punitiva"
+  ],
+  "references": [
+    {
+      "label": "RBI",
+      "url": "https://www.rbi.org.in/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 40,
+  "classification": "restrictive",
+  "primary_sources": [
+    {
+      "type": "law",
+      "title": "Finance Act VDA provisions",
+      "authority": "India",
+      "url": "https://www.indiabudget.gov.in/doc/Budget2022_23/Finance_Bill.pdf",
+      "year": 2022
+    }
+  ],
+  "authorities": [
+    "Income Tax Department"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

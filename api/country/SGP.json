@@ -1,0 +1,87 @@
+{
+  "country": "Singapore",
+  "iso3": "SGP",
+  "region": "Asia",
+  "trend": "improving",
+  "summary_en": "Singapore combines strict licensing with strong policy support for tokenization, stablecoins and institutional digital asset markets.",
+  "summary_pt": "Singapura combina licenciamento rigoroso com forte apoio de política pública para tokenização, stablecoins e mercados institucionais de ativos digitais.",
+  "last_update": "2026-03-27",
+  "criteria": {
+    "legal_certainty": 18,
+    "proportionality": 12,
+    "exchanges": 8,
+    "stablecoins": 9,
+    "tokenization": 10,
+    "taxation": 8,
+    "mining_infrastructure": 4,
+    "innovation_openness": 10,
+    "anti_centralization": 4,
+    "defi": 7
+  },
+  "status": {
+    "exchanges": "licensed",
+    "stablecoins": "regulated",
+    "tokenization": "very active",
+    "taxation": "competitive",
+    "mining": "limited",
+    "cbdc": "wholesale experimentation",
+    "defi": "careful indirect treatment"
+  },
+  "laws": [
+    "Payment Services Act",
+    "MAS Stablecoin Framework",
+    "Project Guardian"
+  ],
+  "opportunities_en": [
+    "Institutional tokenization",
+    "Stablecoins"
+  ],
+  "opportunities_pt": [
+    "Tokenização institucional",
+    "Stablecoins"
+  ],
+  "risks_en": [
+    "Strict licensing thresholds"
+  ],
+  "risks_pt": [
+    "Limiares de licenciamento rigorosos"
+  ],
+  "references": [
+    {
+      "label": "MAS",
+      "url": "https://www.mas.gov.sg/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 83,
+  "classification": "very_favorable",
+  "primary_sources": [
+    {
+      "type": "law",
+      "title": "Payment Services Act",
+      "authority": "MAS",
+      "url": "https://www.mas.gov.sg/regulation/acts/payment-services-act",
+      "year": 2019
+    },
+    {
+      "type": "regulator",
+      "title": "MAS Digital Payment Token services",
+      "authority": "MAS",
+      "url": "https://www.mas.gov.sg/regulation/explainers/payment-services-act",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "MAS"
+  ],
+  "defi_focus_en": "Singapore distinguishes licensed token services from broader DeFi activity and tends to regulate touchpoints rather than protocols as such.",
+  "defi_focus_pt": "Singapura distingue serviços licenciados com tokens da atividade DeFi mais ampla e tende a regular os pontos de contato, não os protocolos em si.",
+  "defi_signals_en": [
+    "Strong discipline for intermediated access points"
+  ],
+  "defi_signals_pt": [
+    "Disciplina forte para pontos de acesso intermediados"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 5
+}
