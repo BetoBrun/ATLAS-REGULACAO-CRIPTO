@@ -1,20 +1,47 @@
-name: Daily rebuild
+name: Daily Atlas Update
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '15 9 * * *'
+    - cron: "0 9 * * *"
+
+permissions:
+  contents: write
+
 jobs:
-  build:
+  update-atlas:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
-      - run: python scripts/run_pipeline.py
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add api data/metrics.json
-          git diff --cached --quiet || git commit -m "chore: rebuild atlas api"
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run pipeline
+        run: |
+          python scripts/run_pipeline.py
+
+      - name: Commit changes if needed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add api/ data/manual-overrides.json data/presets.json content/ .github/workflows/ || true
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: update atlas data"
           git push
