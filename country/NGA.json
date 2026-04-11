@@ -1,0 +1,74 @@
+{
+  "country": "Nigeria",
+  "iso3": "NGA",
+  "region": "Africa",
+  "trend": "mixed",
+  "summary_en": "Nigeria has strong grassroots crypto use but an unstable regulatory path, including CBDC experience with limited traction and changing approaches to exchanges.",
+  "summary_pt": "A Nigéria apresenta forte uso social de criptoativos, mas uma trajetória regulatória instável, incluindo experiência de CBDC com baixa tração e mudanças na abordagem sobre exchanges.",
+  "last_update": "2026-03-17",
+  "criteria": {
+    "legal_certainty": 7,
+    "proportionality": 7,
+    "exchanges": 4,
+    "stablecoins": 5,
+    "tokenization": 3,
+    "taxation": 4,
+    "mining_infrastructure": 5,
+    "innovation_openness": 6,
+    "anti_centralization": 2,
+    "defi": 5
+  },
+  "status": {
+    "exchanges": "uncertain",
+    "stablecoins": "used informally",
+    "tokenization": "limited",
+    "taxation": "unclear",
+    "mining": "neutral",
+    "cbdc": "retail launched with low adoption",
+    "defi": "emerging"
+  },
+  "laws": [
+    "eNaira framework",
+    "Regulatory circulars"
+  ],
+  "opportunities_en": [
+    "High adoption base"
+  ],
+  "opportunities_pt": [
+    "Base alta de adoção"
+  ],
+  "risks_en": [
+    "Policy reversals"
+  ],
+  "risks_pt": [
+    "Reversões de política"
+  ],
+  "references": [
+    {
+      "label": "CBN",
+      "url": "https://www.cbn.gov.ng/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 43,
+  "classification": "restrictive",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "CBN guidelines for VASPs bank accounts",
+      "authority": "CBN",
+      "url": "https://www.cbn.gov.ng/out/2024/fprd/guidelines%20on%20operations%20of%20bank%20accounts%20for%20virtual%20asset%20providers.pdf",
+      "year": 2023
+    }
+  ],
+  "authorities": [
+    "CBN",
+    "SEC Nigeria"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

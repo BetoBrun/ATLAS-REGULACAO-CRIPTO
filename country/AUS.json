@@ -1,0 +1,73 @@
+{
+  "country": "Australia",
+  "iso3": "AUS",
+  "region": "Oceania",
+  "trend": "improving",
+  "summary_en": "Australia offers a relatively open but still maturing framework, with ongoing reforms around tokenization, custody and licensing.",
+  "summary_pt": "A Austrália oferece um quadro relativamente aberto, porém ainda em amadurecimento, com reformas em andamento sobre tokenização, custódia e licenciamento.",
+  "last_update": "2026-03-10",
+  "criteria": {
+    "legal_certainty": 13,
+    "proportionality": 10,
+    "exchanges": 7,
+    "stablecoins": 6,
+    "tokenization": 7,
+    "taxation": 6,
+    "mining_infrastructure": 7,
+    "innovation_openness": 8,
+    "anti_centralization": 4,
+    "defi": 5
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "developing",
+    "tokenization": "active reform",
+    "taxation": "moderate",
+    "mining": "potentially favorable",
+    "cbdc": "research",
+    "defi": "indirect treatment"
+  },
+  "laws": [
+    "Treasury consultation papers",
+    "ASIC guidance"
+  ],
+  "opportunities_en": [
+    "Mining and tokenization"
+  ],
+  "opportunities_pt": [
+    "Mineração e tokenização"
+  ],
+  "risks_en": [
+    "Framework still evolving"
+  ],
+  "risks_pt": [
+    "Arcabouço ainda em evolução"
+  ],
+  "references": [
+    {
+      "label": "Treasury Australia",
+      "url": "https://treasury.gov.au/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 68,
+  "classification": "favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "ASIC crypto-assets guidance",
+      "authority": "ASIC",
+      "url": "https://asic.gov.au/regulatory-resources/digital-transformation/crypto-assets/",
+      "year": 2025
+    }
+  ],
+  "authorities": [
+    "ASIC"
+  ],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 3
+}

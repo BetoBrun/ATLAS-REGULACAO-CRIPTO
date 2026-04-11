@@ -1,0 +1,87 @@
+{
+  "country": "United Arab Emirates",
+  "iso3": "ARE",
+  "region": "Middle East",
+  "trend": "improving",
+  "summary_en": "The UAE offers one of the most business-friendly regulated environments for exchanges, tokenization and digital asset services, especially in Dubai and ADGM.",
+  "summary_pt": "Os Emirados Árabes Unidos oferecem um dos ambientes regulados mais favoráveis a negócios para exchanges, tokenização e serviços com ativos digitais, especialmente em Dubai e ADGM.",
+  "last_update": "2026-03-21",
+  "criteria": {
+    "legal_certainty": 17,
+    "proportionality": 13,
+    "exchanges": 10,
+    "stablecoins": 8,
+    "tokenization": 9,
+    "taxation": 9,
+    "mining_infrastructure": 6,
+    "innovation_openness": 10,
+    "anti_centralization": 4,
+    "defi": 7
+  },
+  "status": {
+    "exchanges": "licensed",
+    "stablecoins": "open with rules",
+    "tokenization": "very active",
+    "taxation": "favorable",
+    "mining": "moderate",
+    "cbdc": "wholesale and cross-border exploration",
+    "defi": "open through regulated touchpoints"
+  },
+  "laws": [
+    "VARA regime",
+    "ADGM virtual assets framework"
+  ],
+  "opportunities_en": [
+    "Regional hub",
+    "Low-tax environment"
+  ],
+  "opportunities_pt": [
+    "Hub regional",
+    "Ambiente de baixa tributação"
+  ],
+  "risks_en": [
+    "Jurisdictional complexity between zones"
+  ],
+  "risks_pt": [
+    "Complexidade jurisdicional entre zonas"
+  ],
+  "references": [
+    {
+      "label": "VARA",
+      "url": "https://www.vara.ae/"
+    }
+  ],
+  "thesis_core": true,
+  "score": 86,
+  "classification": "very_favorable",
+  "primary_sources": [
+    {
+      "type": "regulator",
+      "title": "VARA rulebooks",
+      "authority": "VARA",
+      "url": "https://www.vara.ae/en/regulations/",
+      "year": 2024
+    },
+    {
+      "type": "policy",
+      "title": "UAE virtual assets framework",
+      "authority": "Dubai VARA",
+      "url": "https://www.vara.ae/en/",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "VARA",
+    "ADGM/FSRA as applicable"
+  ],
+  "defi_focus_en": "The UAE is receptive to digital asset innovation but still channels DeFi exposure through licensed entities and controlled market access points.",
+  "defi_focus_pt": "Os Emirados são receptivos à inovação com ativos digitais, mas ainda canalizam a exposição a DeFi por entidades licenciadas e pontos controlados de acesso ao mercado.",
+  "defi_signals_en": [
+    "Regulated wrappers matter more than protocol purity"
+  ],
+  "defi_signals_pt": [
+    "Estruturas reguladas importam mais que a pureza do protocolo"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 4
+}

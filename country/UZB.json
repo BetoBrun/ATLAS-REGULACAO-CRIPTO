@@ -1,0 +1,59 @@
+{
+  "country": "Uzbekistan",
+  "iso3": "UZB",
+  "region": "Asia",
+  "trend": "mixed",
+  "summary_en": "Baseline comparative profile for Uzbekistan. Primary-source regulatory audit is pending deeper country-by-country validation in the Atlas pipeline.",
+  "summary_pt": "Perfil comparativo preliminar de Uzbekistan. A auditoria regulatória com fontes primárias ainda depende de validação aprofundada país a país no pipeline do Atlas.",
+  "last_update": "2026-04-07",
+  "criteria": {
+    "legal_certainty": 8,
+    "proportionality": 7,
+    "exchanges": 5,
+    "stablecoins": 5,
+    "tokenization": 5,
+    "taxation": 5,
+    "mining_infrastructure": 5,
+    "innovation_openness": 5,
+    "anti_centralization": 2,
+    "defi": 3
+  },
+  "status": {
+    "exchanges": "uncertain",
+    "stablecoins": "uncertain",
+    "tokenization": "limited",
+    "taxation": "heavy",
+    "mining": "allowed with friction",
+    "cbdc": "research only",
+    "defi": "uncertain"
+  },
+  "laws": [],
+  "opportunities_en": [
+    "Expand official-source review",
+    "Refine classification by activity",
+    "Add tax and AML detail"
+  ],
+  "opportunities_pt": [
+    "Ampliar revisão com fontes oficiais",
+    "Refinar classificação por atividade",
+    "Adicionar detalhe tributário e AML"
+  ],
+  "risks_en": [
+    "Preliminary profile may change after source audit"
+  ],
+  "risks_pt": [
+    "O perfil preliminar pode mudar após auditoria das fontes"
+  ],
+  "references": [],
+  "score": 47,
+  "classification": "restrictive",
+  "thesis_core": false,
+  "primary_sources": [],
+  "authorities": [],
+  "defi_focus_en": "",
+  "defi_focus_pt": "",
+  "defi_signals_en": [],
+  "defi_signals_pt": [],
+  "profile_quality": "preliminary",
+  "normative_act_count": 0
+}

@@ -1,0 +1,76 @@
+{
+  "country": "South Korea",
+  "iso3": "KOR",
+  "region": "Asia",
+  "trend": "improving",
+  "summary_en": "South Korea maintains strong oversight of exchanges and market conduct, with growing interest in tokenization and institutional use cases.",
+  "summary_pt": "A Coreia do Sul mantém forte supervisão sobre exchanges e conduta de mercado, com interesse crescente em tokenização e casos de uso institucionais.",
+  "last_update": "2026-03-11",
+  "criteria": {
+    "legal_certainty": 14,
+    "proportionality": 9,
+    "exchanges": 8,
+    "stablecoins": 6,
+    "tokenization": 7,
+    "taxation": 5,
+    "mining_infrastructure": 4,
+    "innovation_openness": 7,
+    "anti_centralization": 4,
+    "defi": 6
+  },
+  "status": {
+    "exchanges": "regulated",
+    "stablecoins": "developing",
+    "tokenization": "developing",
+    "taxation": "moderate",
+    "mining": "limited",
+    "cbdc": "research",
+    "defi": "user-protection centric treatment"
+  },
+  "laws": [
+    "Virtual Asset User Protection Act"
+  ],
+  "opportunities_en": [
+    "Market conduct and tokenization"
+  ],
+  "opportunities_pt": [
+    "Conduta de mercado e tokenização"
+  ],
+  "risks_en": [
+    "Strict onboarding requirements"
+  ],
+  "risks_pt": [
+    "Requisitos rigorosos de onboarding"
+  ],
+  "references": [
+    {
+      "label": "FSC Korea",
+      "url": "https://www.fsc.go.kr/eng/"
+    }
+  ],
+  "thesis_core": false,
+  "score": 64,
+  "classification": "mixed",
+  "primary_sources": [
+    {
+      "type": "law",
+      "title": "Virtual Asset User Protection Act",
+      "authority": "Korea FSC",
+      "url": "https://www.fsc.go.kr/eng/pr010101/81698",
+      "year": 2024
+    }
+  ],
+  "authorities": [
+    "FSC Korea"
+  ],
+  "defi_focus_en": "South Korea focuses on user protection and market conduct, while DeFi remains less clearly separated from broader virtual asset regulation.",
+  "defi_focus_pt": "A Coreia do Sul foca proteção do usuário e conduta de mercado, enquanto DeFi permanece menos claramente separado da regulação geral de ativos virtuais.",
+  "defi_signals_en": [
+    "Consumer protection lens dominates"
+  ],
+  "defi_signals_pt": [
+    "Predomina a ótica de proteção do consumidor"
+  ],
+  "profile_quality": "primary_source_backed",
+  "normative_act_count": 2
+}
