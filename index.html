@@ -39,47 +39,6 @@
       <a href="#methodology-section" class="nav-link">Methodology</a>
     </nav>
 
-    <section class="card atlas-explorer" id="atlas-explorer">
-      <div class="atlas-explorer-grid">
-        <div class="atlas-explorer-main">
-          <div class="eyebrow atlas-mini-eyebrow">Comparative exploration</div>
-          <h2 class="atlas-explorer-title">Navegue pelos modelos regulatórios como um mapa comparado</h2>
-          <p class="atlas-explorer-copy">Uma camada visual inspirada em atlas comparativos: visão macro do mundo, leitura rápida de clusters regulatórios e detalhe analítico por jurisdição.</p>
-          <div class="atlas-explorer-actions">
-            <div class="control compact-control atlas-mode-control">
-              <label for="map-mode">Modo do mapa</label>
-              <select id="map-mode">
-                <option value="score">Score</option>
-                <option value="cluster">Modelo regulatório</option>
-                <option value="stablecoins">Stablecoins</option>
-                <option value="cbdc">CBDC</option>
-              </select>
-            </div>
-            <div class="control compact-control atlas-mode-control">
-              <label for="semantic-search">Busca semântica leve</label>
-              <input id="semantic-search" type="search" placeholder="DeFi, stablecoins, MiCA, licensing..." />
-            </div>
-          </div>
-        </div>
-        <div class="atlas-explorer-side">
-          <div class="atlas-microstats">
-            <article class="atlas-microstat"><span class="atlas-micro-label">Filtrados</span><strong id="micro-filtered">—</strong></article>
-            <article class="atlas-microstat"><span class="atlas-micro-label">Regiões</span><strong id="micro-regions">—</strong></article>
-            <article class="atlas-microstat"><span class="atlas-micro-label">Perfis verificados</span><strong id="micro-verified">—</strong></article>
-          </div>
-          <div class="atlas-cluster-box">
-            <div class="atlas-cluster-title">Clusters regulatórios</div>
-            <div id="cluster-pills" class="cluster-pills"></div>
-          </div>
-          <div class="atlas-selection-box">
-            <div class="atlas-cluster-title">Destaques do filtro</div>
-            <div id="selected-country-pills" class="selected-country-pills"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-
     <section id="overview-section" class="stats-grid sprint1-grid">
       <article class="card stat-card"><div class="label" id="kpi-jurisdictions-label">Jurisdictions mapped</div><div class="value" id="stat-jurisdictions">—</div></article>
       <article class="card stat-card"><div class="label" id="kpi-avg-label">Average score</div><div class="value" id="stat-themes">—</div></article>
@@ -162,7 +121,6 @@
             <div>
               <h2 data-i18n="mapTitle">Global map</h2>
               <p id="metadata"></p>
-              <p id="map-mode-legend" class="map-mode-legend">Mapa comparativo por score.</p>
             </div>
           </div>
           <div id="world-map"></div>

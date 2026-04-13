@@ -106,6 +106,8 @@ function translateTrend(value) { return t(`t_${value}`); }
 function translateStatus(value='') { return t(String(value).toLowerCase()) || value; }
 function fmtDate(d){ return d ? new Date(d).toLocaleDateString(state.lang === 'pt' ? 'pt-BR' : 'en-GB') : '—'; }
 function loadJson(path){ return fetch(path).then(r => { if(!r.ok) throw new Error(`Failed to load ${path}`); return r.json(); }); }
+function getCountriesList() { return Array.isArray(state?.countries) ? state.countries : []; }
+function getVisibleCountries() { return Array.isArray(state?.filtered) && state.filtered.length ? state.filtered : getCountriesList(); }
 
 function applyTranslations() {
   document.documentElement.lang = state.lang;
@@ -143,7 +145,7 @@ function setupLanguage() {
 
 function populateRegions() {
   const select = document.getElementById('region-filter');
-  const regions = [...new Set(state.countries.map(c => c.region))].sort((a,b)=>REGION_ORDER.indexOf(a)-REGION_ORDER.indexOf(b));
+  const regions = [...new Set(getCountriesList().map(c => c.region))].sort((a,b)=>REGION_ORDER.indexOf(a)-REGION_ORDER.indexOf(b));
   select.innerHTML = `<option value="all">${t('allRegions')}</option>` + regions.map(r => `<option value="${esc(r)}">${esc(r)}</option>`).join('');
   populateCompareSelects();
   populateTimelineFilters();
@@ -151,7 +153,7 @@ function populateRegions() {
 }
 
 function populateCompareSelects() {
-  const options = state.countries.slice().sort((a,b)=>a.country.localeCompare(b.country)).map(c => `<option value="${esc(c.iso3)}">${esc(c.country)}</option>`).join('');
+  const options = getCountriesList().slice().sort((a,b)=>a.country.localeCompare(b.country)).map(c => `<option value="${esc(c.iso3)}">${esc(c.country)}</option>`).join('');
   ['compare-a','compare-b'].forEach((id, idx) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -503,8 +505,8 @@ function renderMapCoverage(values, markers) {
 
 function buildMap() {
   const values = {};
-  state.countries.forEach(c => { const code = getMapCode(c); if (code && !MARKER_ONLY.has(c.iso3)) values[code] = c.score; });
-  const markers = state.countries
+  getVisibleCountries().forEach(c => { const code = getMapCode(c); if (code && !MARKER_ONLY.has(c.iso3)) values[code] = c.score; });
+  const markers = getVisibleCountries()
     .filter(c => MARKER_COORDS[c.iso3])
     .map(c => ({
       name: state.lang === 'pt' ? (MARKER_COORDS[c.iso3].label_pt || c.country) : (MARKER_COORDS[c.iso3].label_en || c.country),
@@ -529,25 +531,25 @@ function buildMap() {
     selectedRegions: selectedCode ? [selectedCode] : [],
     selectedMarkers: selectedMarkerIndex >= 0 ? [selectedMarkerIndex] : [],
     onRegionTooltipShow(_, tooltip, code) {
-      const country = state.countries.find(c => getMapCode(c) === code);
+      const country = getVisibleCountries().find(c => getMapCode(c) === code) || getCountriesList().find(c => getMapCode(c) === code);
       if (!country) { tooltip.text(`${code}: ${t('noData')}`); return; }
       const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
       tooltip.html(`<div style="max-width:260px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br>${t('trend')}: ${translateTrend(country.trend)}<br><span style="color:#64748b">${esc(summary.slice(0,120))}...</span></div>`);
     },
     onMarkerTooltipShow(_, tooltip, index) {
       const marker = markers[index];
-      const country = state.countries.find(c => c.iso3 === marker.iso3);
+      const country = getVisibleCountries().find(c => c.iso3 === marker.iso3) || getCountriesList().find(c => c.iso3 === marker.iso3);
       if (!country) { tooltip.text(`${t('markerTooltip')}: ${marker.name}`); return; }
       const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
       tooltip.html(`<div style="max-width:260px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br>${t('trend')}: ${translateTrend(country.trend)}<br><span style="color:#64748b">${esc(summary.slice(0,120))}...</span></div>`);
     },
     onRegionClick(_, code) {
-      const country = state.countries.find(c => getMapCode(c) === code);
+      const country = getVisibleCountries().find(c => getMapCode(c) === code) || getCountriesList().find(c => getMapCode(c) === code);
       if (country) { state.selected = country; renderCountryPanel(); buildMap(); }
     },
     onMarkerClick(_, index) {
       const marker = markers[index];
-      const country = state.countries.find(c => c.iso3 === marker.iso3);
+      const country = getVisibleCountries().find(c => c.iso3 === marker.iso3) || getCountriesList().find(c => c.iso3 === marker.iso3);
       if (country) { state.selected = country; renderCountryPanel(); buildMap(); }
     }
   });
@@ -560,22 +562,22 @@ function buildMap() {
 function renderMetadata(meta) {
   state.metadata = meta;
   const dt = meta?.generated_at ? new Date(meta.generated_at).toLocaleString(state.lang === 'pt' ? 'pt-BR' : 'en-GB') : '—';
-  const countriesCovered = meta?.country_count ?? state.countries.length;
+  const countriesCovered = meta?.country_count ?? getCountriesList().length;
   const avgScore = state.filtered.length ? Math.round(state.filtered.reduce((sum,c)=>sum + (c.score || 0), 0) / state.filtered.length) : 0;
   const licensedCount = state.filtered.filter(c => /licensed|regulated|framework/i.test(String(c.status?.exchanges || ''))).length;
   const cbdcCount = state.filtered.filter(c => !!c.status?.cbdc && !/not central/i.test(String(c.status?.cbdc || ''))).length;
-  document.getElementById('metadata').textContent = `${t('generatedAt')}: ${dt} • ${t('countriesCovered')}: ${countriesCovered} • ${state.filtered.length}/${state.countries.length}`;
+  document.getElementById('metadata').textContent = `${t('generatedAt')}: ${dt} • ${t('countriesCovered')}: ${countriesCovered} • ${state.filtered.length}/${getCountriesList().length}`;
   document.getElementById('stat-jurisdictions').textContent = state.filtered.length;
   document.getElementById('stat-themes').textContent = avgScore;
   const licensedEl = document.getElementById('stat-licensed'); if (licensedEl) licensedEl.textContent = licensedCount;
   const cbdcEl = document.getElementById('stat-cbdc'); if (cbdcEl) cbdcEl.textContent = cbdcCount;
-  const actsEl = document.getElementById('stat-acts'); if (actsEl) actsEl.textContent = state.countries.reduce((sum,c)=>sum + (c.laws?.length || 0), 0);
-  const thesisEl = document.getElementById('stat-thesis'); if (thesisEl) thesisEl.textContent = meta?.thesis_core_count ?? state.countries.filter(c=>c.thesis_core).length;
+  const actsEl = document.getElementById('stat-acts'); if (actsEl) actsEl.textContent = getCountriesList().reduce((sum,c)=>sum + (c.laws?.length || 0), 0);
+  const thesisEl = document.getElementById('stat-thesis'); if (thesisEl) thesisEl.textContent = meta?.thesis_core_count ?? getCountriesList().filter(c=>c.thesis_core).length;
 }
 
 function renderCompare() {
-  const a = state.countries.find(c => c.iso3 === document.getElementById('compare-a')?.value);
-  const b = state.countries.find(c => c.iso3 === document.getElementById('compare-b')?.value);
+  const a = getCountriesList().find(c => c.iso3 === document.getElementById('compare-a')?.value);
+  const b = getCountriesList().find(c => c.iso3 === document.getElementById('compare-b')?.value);
   const body = document.getElementById('compare-body');
   if (!a || !b || !body) return;
   const rows = [
@@ -599,7 +601,7 @@ function renderCompare() {
 
 function renderAll() {
   document.getElementById('score-min-value').textContent = document.getElementById('score-min').value;
-  renderPresets(); renderCriteriaOverview(); renderRanking(); renderUpdates(); renderThemes(); renderExperiences(); renderLibrary(); renderTimeline(); renderTable(); renderCountryPanel(); renderCompare(); if (document.getElementById('world-map') && state.view==='map') buildMap();
+  renderPresets(); renderCriteriaOverview(); renderRanking(); renderUpdates(); renderThemes(); renderExperiences(); renderLibrary(); renderTimeline(); renderTable(); renderCountryPanel(); renderCompare(); if (document.getElementById('world-map') && state.view==='map') scheduleMapRender();
   if (state.metadata) renderMetadata(state.metadata);
 }
 
@@ -626,24 +628,45 @@ function setupControls() {
     document.querySelectorAll('.view-btn').forEach(x=>x.classList.toggle('active', x===btn));
     document.getElementById('map-section').classList.toggle('hidden', state.view !== 'map');
     document.getElementById('table-section').classList.toggle('hidden', state.view !== 'table');
-    if (state.view === 'map') setTimeout(buildMap, 50);
+    if (state.view === 'map') setTimeout(scheduleMapRender, 50);
   }));
 }
 
 async function init() {
-  setupLanguage(); setupControls(); attachDrawerEvents();
-  const [countries, metadata, themesFile, updates, experiencesFile, libraryFile, timelineFile, presetsFile] = await Promise.all([
+  setupLanguage();
+  setupControls();
+  attachDrawerEvents();
+
+  const [countriesRaw, metadata, themesFile, updates, experiencesFile, libraryFile, timelineFile, presetsFile] = await Promise.all([
     loadJson('api/countries.json'),
     loadJson('api/metadata.json'),
-    loadJson('api/themes.json').catch(()=>({themes:[]})),
-    loadJson('api/updates.json').catch(()=>[]),
-    loadJson('api/experiences.json').catch(()=>({experiences:[]})),
-    loadJson('api/library.json').catch(()=>({items:[]})),
-    loadJson('api/timeline.json').catch(()=>({events:[]})),
-    loadJson('data/presets.json').catch(()=>({presets: DEFAULT_PRESETS}))
+    loadJson('api/themes.json').catch(() => ({ themes: [] })),
+    loadJson('api/updates.json').catch(() => []),
+    loadJson('api/experiences.json').catch(() => ({ experiences: [] })),
+    loadJson('api/library.json').catch(() => ({ items: [] })),
+    loadJson('api/timeline.json').catch(() => ({ events: [] })),
+    loadJson('data/presets.json').catch(() => ({ presets: DEFAULT_PRESETS }))
   ]);
-  state.countries = countries; state.filtered = countries; state.selected = countries.find(c => c.iso3 === 'BRA') || countries[0] || null; state.metadata = metadata; state.themes = themesFile.themes || []; state.updates = updates || []; state.experiences = experiencesFile.experiences || []; state.library = libraryFile.items || []; state.timeline = timelineFile.events || []; state.presets = presetsFile.presets || DEFAULT_PRESETS;
-  populateRegions(); applyTranslations();
+
+  const countries = Array.isArray(countriesRaw)
+    ? countriesRaw
+    : Array.isArray(countriesRaw?.countries)
+      ? countriesRaw.countries
+      : [];
+
+  state.countries = countries;
+  state.filtered = countries;
+  state.selected = countries.find(c => c.iso3 === 'BRA') || countries[0] || null;
+  state.metadata = metadata;
+  state.themes = themesFile.themes || [];
+  state.updates = updates || [];
+  state.experiences = experiencesFile.experiences || [];
+  state.library = libraryFile.items || [];
+  state.timeline = timelineFile.events || [];
+  state.presets = presetsFile.presets || DEFAULT_PRESETS;
+
+  populateRegions();
+  applyTranslations();
 }
 
 init().catch(err => {
@@ -652,228 +675,12 @@ init().catch(err => {
 });
 
 
-
-/* refined map + clusters + performance patch */
-function getCountriesList() {
-  return Array.isArray(state?.countries) ? state.countries : [];
-}
-function getVisibleCountries() {
-  return Array.isArray(state?.filtered) && state.filtered.length ? state.filtered : getCountriesList();
-}
-function getSourceCount(country) {
-  const refs = country?.primary_sources || country?.references || [];
-  return Array.isArray(refs) ? refs.length : 0;
-}
-function getRegulatoryCluster(country) {
-  const ex = String(country?.status?.exchanges || '').toLowerCase();
-  const st = String(country?.status?.stablecoins || '').toLowerCase();
-  const score = Number(country?.score || 0);
-  if (/banned|hostile|prohibited/.test(ex + ' ' + st) || score < 35) return { key:'restrictive', label: state.lang==='pt' ? 'Restritivo' : 'Restrictive' };
-  if (/litigation|warning|enforcement/.test(ex + ' ' + st)) return { key:'enforcement', label: state.lang==='pt' ? 'Enforcement-driven' : 'Enforcement-driven' };
-  if (/regulated|licensed|mica|framework/.test(ex + ' ' + st) && score >= 65) return { key:'compliance', label: state.lang==='pt' ? 'Compliance-heavy' : 'Compliance-heavy' };
-  if (/open|operating|active|specialized/.test(ex + ' ' + st) && score >= 60) return { key:'innovation', label: state.lang==='pt' ? 'Pró-inovação' : 'Innovation-friendly' };
-  return { key:'emerging', label: state.lang==='pt' ? 'Emergente' : 'Emerging' };
-}
-function clusterToScore(country) {
-  const key = getRegulatoryCluster(country).key;
-  return ({ innovation:85, compliance:68, enforcement:52, emerging:42, restrictive:18 })[key] || (country?.score || 0);
-}
-function getMapMetric(country, mode) {
-  if (mode === 'stablecoins') {
-    const s = String(country?.status?.stablecoins || '').toLowerCase();
-    if (/regulated|mature|integrated|active/.test(s)) return 85;
-    if (/partial|developing|under/.test(s)) return 60;
-    if (/uncertain|limited/.test(s)) return 40;
-    if (/banned|prohibited/.test(s)) return 15;
-    return country?.score || 0;
-  }
-  if (mode === 'cbdc') {
-    const s = String(country?.status?.cbdc || '').toLowerCase();
-    if (/launched|advanced|retail launched/.test(s)) return 90;
-    if (/pilot|wholesale|cross-border/.test(s)) return 70;
-    if (/research|consultation|exploration/.test(s)) return 45;
-    if (/not central/.test(s)) return 20;
-    return country?.score || 0;
-  }
-  if (mode === 'cluster') return clusterToScore(country);
-  return country?.score || 0;
-}
-function getMapModeLabel(mode) {
-  return ({
-    score: state.lang === 'pt' ? 'Mapa comparativo por score.' : 'Comparative map by score.',
-    cluster: state.lang === 'pt' ? 'Mapa por modelo regulatório.' : 'Map by regulatory model.',
-    stablecoins: state.lang === 'pt' ? 'Mapa focado em stablecoins.' : 'Stablecoins-focused map.',
-    cbdc: state.lang === 'pt' ? 'Mapa focado em CBDC.' : 'CBDC-focused map.'
-  })[mode] || '';
-}
-function renderExplorerSummary() {
-  const filtered = getVisibleCountries();
-  const regions = new Set(filtered.map(c => c.region).filter(Boolean));
-  const verified = filtered.filter(c => /primary|source_backed|verified/i.test(String(c.profile_quality || '')) || getSourceCount(c) > 0).length;
-
-  const mf = document.getElementById('micro-filtered');
-  const mr = document.getElementById('micro-regions');
-  const mv = document.getElementById('micro-verified');
-  if (mf) mf.textContent = String(filtered.length);
-  if (mr) mr.textContent = String(regions.size);
-  if (mv) mv.textContent = String(verified);
-
-  const clusterBox = document.getElementById('cluster-pills');
-  if (clusterBox) {
-    const counts = {};
-    filtered.forEach(c => {
-      const cl = getRegulatoryCluster(c);
-      counts[cl.key] = counts[cl.key] || { label: cl.label, count: 0 };
-      counts[cl.key].count += 1;
-    });
-    clusterBox.innerHTML = Object.entries(counts)
-      .sort((a,b)=>b[1].count-a[1].count)
-      .map(([key,item]) => `<span class="cluster-pill cluster-${key}">${item.label}<em>${item.count}</em></span>`)
-      .join('');
-  }
-
-  const pills = document.getElementById('selected-country-pills');
-  if (pills) {
-    const top = filtered.slice().sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8);
-    pills.innerHTML = top.map(c => `<button class="country-pill" data-iso3="${c.iso3}">${c.country}</button>`).join('');
-    pills.querySelectorAll('.country-pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const c = getCountriesList().find(x => x.iso3 === btn.dataset.iso3);
-        if (c) {
-          state.selected = c;
-          renderCountryPanel();
-          scheduleMapRender();
-        }
-      });
-    });
-  }
-
-  const legend = document.getElementById('map-mode-legend');
-  const mode = document.getElementById('map-mode')?.value || 'score';
-  if (legend) legend.textContent = getMapModeLabel(mode);
-}
-
-let _atlas_map_render_scheduled = false;
+let _atlasMapRenderScheduled = false;
 function scheduleMapRender() {
-  if (_atlas_map_render_scheduled) return;
-  _atlas_map_render_scheduled = true;
+  if (_atlasMapRenderScheduled) return;
+  _atlasMapRenderScheduled = true;
   requestAnimationFrame(() => {
-    _atlas_map_render_scheduled = false;
-    if (document.getElementById('world-map') && state.view === 'map') {
-      buildMap();
-    }
+    _atlasMapRenderScheduled = false;
+    if (document.getElementById('world-map') && state.view === 'map') buildMap();
   });
 }
-
-(function patchMapBuild(){
-  if (typeof buildMap !== 'function') return;
-  const _origBuildMap = buildMap;
-  buildMap = function patchedBuildMap() {
-    const source = getVisibleCountries();
-    const mode = document.getElementById('map-mode')?.value || 'score';
-    const values = {};
-    source.forEach(c => {
-      const code = getMapCode(c);
-      if (code && !MARKER_ONLY.has(c.iso3)) values[code] = getMapMetric(c, mode);
-    });
-
-    const markers = source.filter(c => MARKER_COORDS[c.iso3]).map(c => ({
-      name: state.lang === 'pt' ? (MARKER_COORDS[c.iso3].label_pt || c.country) : (MARKER_COORDS[c.iso3].label_en || c.country),
-      coords: [MARKER_COORDS[c.iso3].lat, MARKER_COORDS[c.iso3].lng],
-      iso3: c.iso3,
-      score: getMapMetric(c, mode)
-    }));
-
-    const selectedCode = state.selected ? getMapCode(state.selected) : null;
-    const selectedMarkerIndex = state.selected ? markers.findIndex(m => m.iso3 === state.selected.iso3) : -1;
-
-    try {
-      if (state.map) state.map.destroy();
-      state.map = new jsVectorMap({
-        selector: '#world-map',
-        map: 'world',
-        backgroundColor: 'transparent',
-        zoomButtons: true,
-        zoomOnScroll: true,
-        visualizeData: { scale: ['#b91c1c','#f97316','#eab308','#16a34a','#14532d'], values },
-        regionStyle: { initial: { fill: '#dbe4ef', fillOpacity: 1, stroke: '#fff', strokeWidth: 0.7 }, selected: { fill: '#1d4ed8' } },
-        markers,
-        markerStyle: {
-          initial: { r: 5, fill: '#0f172a', stroke: '#ffffff', strokeWidth: 1.5 },
-          hover: { fill: '#1d4ed8' },
-          selected: { fill: '#1d4ed8', r: 6 }
-        },
-        selectedRegions: selectedCode ? [selectedCode] : [],
-        selectedMarkers: selectedMarkerIndex >= 0 ? [selectedMarkerIndex] : [],
-        onRegionTooltipShow(_, tooltip, code) {
-          const country = source.find(c => getMapCode(c) === code) || getCountriesList().find(c => getMapCode(c) === code);
-          if (!country) { tooltip.text(`${code}: ${t('noData')}`); return; }
-          const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
-          const cluster = getRegulatoryCluster(country);
-          tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cluster.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${getSourceCount(country)}</div></div>`);
-        },
-        onMarkerTooltipShow(_, tooltip, index) {
-          const marker = markers[index];
-          const country = source.find(c => c.iso3 === marker.iso3) || getCountriesList().find(c => c.iso3 === marker.iso3);
-          if (!country) { tooltip.text(`${t('markerTooltip')}: ${marker.name}`); return; }
-          const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
-          const cluster = getRegulatoryCluster(country);
-          tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cluster.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${getSourceCount(country)}</div></div>`);
-        },
-        onRegionClick(_, code) {
-          const country = getCountriesList().find(c => getMapCode(c) === code);
-          if (country) { state.selected = country; renderCountryPanel(); scheduleMapRender(); }
-        },
-        onMarkerClick(_, index) {
-          const marker = markers[index];
-          const country = getCountriesList().find(c => c.iso3 === marker.iso3);
-          if (country) { state.selected = country; renderCountryPanel(); scheduleMapRender(); }
-        }
-      });
-      renderMapCoverage(values, markers);
-      renderExplorerSummary();
-    } catch (err) {
-      console.error('Map render failed', err);
-      const mapEl = document.getElementById('world-map');
-      if (mapEl) mapEl.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${esc(err.message || 'Map failed')}</p></div>`;
-    }
-  }
-})();
-
-(function patchApplyFilters(){
-  if (typeof applyFilters !== 'function') return;
-  const _origApplyFilters = applyFilters;
-  applyFilters = function patchedApplyFilters() {
-    _origApplyFilters();
-    const q = document.getElementById('semantic-search')?.value?.trim()?.toLowerCase();
-    if (q) {
-      state.filtered = getVisibleCountries().filter(c => JSON.stringify(c).toLowerCase().includes(q));
-      if (state.selected && !state.filtered.some(c => c.iso3 === state.selected.iso3)) {
-        state.selected = state.filtered[0] || getCountriesList()[0] || null;
-      }
-      renderAll();
-      return;
-    }
-    renderExplorerSummary();
-  }
-})();
-
-(function patchRenderAll(){
-  if (typeof renderAll !== 'function') return;
-  const _origRenderAll = renderAll;
-  renderAll = function patchedRenderAll() {
-    _origRenderAll();
-    renderExplorerSummary();
-    scheduleMapRender();
-  }
-})();
-
-(function patchSetupControls(){
-  if (typeof setupControls !== 'function') return;
-  const _origSetupControls = setupControls;
-  setupControls = function patchedSetupControls() {
-    _origSetupControls();
-    document.getElementById('map-mode')?.addEventListener('change', () => scheduleMapRender());
-    document.getElementById('semantic-search')?.addEventListener('input', () => applyFilters());
-  }
-})();

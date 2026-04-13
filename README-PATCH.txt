@@ -1,2 +1,1 @@
-Substitua index.html, script.js e style.css na raiz do repositório.
-Inclui: correção do init(), mapa refinado por modos, clusters regulatórios, performance com scheduleMapRender e busca semântica leve.
+Substitua principalmente script.js na raiz do repositório. Corrige countries.find is not a function, normaliza api/countries.json e melhora o re-render do mapa.
