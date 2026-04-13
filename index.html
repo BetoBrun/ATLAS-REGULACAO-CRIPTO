@@ -63,18 +63,9 @@
         </div>
         <div class="atlas-explorer-side">
           <div class="atlas-microstats">
-            <article class="atlas-microstat">
-              <span class="atlas-micro-label">Filtrados</span>
-              <strong id="micro-filtered">—</strong>
-            </article>
-            <article class="atlas-microstat">
-              <span class="atlas-micro-label">Regiões</span>
-              <strong id="micro-regions">—</strong>
-            </article>
-            <article class="atlas-microstat">
-              <span class="atlas-micro-label">Perfis verificados</span>
-              <strong id="micro-verified">—</strong>
-            </article>
+            <article class="atlas-microstat"><span class="atlas-micro-label">Filtrados</span><strong id="micro-filtered">—</strong></article>
+            <article class="atlas-microstat"><span class="atlas-micro-label">Regiões</span><strong id="micro-regions">—</strong></article>
+            <article class="atlas-microstat"><span class="atlas-micro-label">Perfis verificados</span><strong id="micro-verified">—</strong></article>
           </div>
           <div class="atlas-cluster-box">
             <div class="atlas-cluster-title">Clusters regulatórios</div>
@@ -87,7 +78,7 @@
         </div>
       </div>
     </section>
-
+    
 
     <section id="overview-section" class="stats-grid sprint1-grid">
       <article class="card stat-card"><div class="label" id="kpi-jurisdictions-label">Jurisdictions mapped</div><div class="value" id="stat-jurisdictions">—</div></article>
@@ -171,6 +162,7 @@
             <div>
               <h2 data-i18n="mapTitle">Global map</h2>
               <p id="metadata"></p>
+              <p id="map-mode-legend" class="map-mode-legend">Mapa comparativo por score.</p>
             </div>
           </div>
           <div id="world-map"></div>
@@ -237,7 +229,7 @@
     </section>
 
     <section id="compare-section" class="card compare-section secondary-section">
-      <div class="card-header"><div><h2 data-i18n="compareTitle">Compare jurisdictions</h2><p class="section-intro">Leitura lado a lado das jurisdições mais importantes do Atlas.</p></div></div>
+      <div class="card-header"><h2 data-i18n="compareTitle">Compare jurisdictions</h2></div>
       <div class="compare-controls">
         <div class="control"><label for="compare-a" data-i18n="jurisdictionA">Jurisdiction A</label><select id="compare-a"></select></div>
         <div class="control"><label for="compare-b" data-i18n="jurisdictionB">Jurisdiction B</label><select id="compare-b"></select></div>

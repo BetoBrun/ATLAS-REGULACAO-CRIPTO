@@ -642,7 +642,7 @@ async function init() {
     loadJson('api/timeline.json').catch(()=>({events:[]})),
     loadJson('data/presets.json').catch(()=>({presets: DEFAULT_PRESETS}))
   ]);
-  state.countries = countries; state.filtered = countries; state.selected = countries.find(c=>c.iso3==='BRA') || countries[0] || null; state.metadata = metadata; state.themes = themesFile.themes || []; state.updates = updates || []; state.experiences = experiencesFile.experiences || []; state.library = libraryFile.items || []; state.timeline = timelineFile.events || []; state.presets = presetsFile.presets || DEFAULT_PRESETS;
+  state.countries = countries; state.filtered = countries; state.selected = countries.find(c => c.iso3 === 'BRA') || countries[0] || null; state.metadata = metadata; state.themes = themesFile.themes || []; state.updates = updates || []; state.experiences = experiencesFile.experiences || []; state.library = libraryFile.items || []; state.timeline = timelineFile.events || []; state.presets = presetsFile.presets || DEFAULT_PRESETS;
   populateRegions(); applyTranslations();
 }
 
@@ -653,196 +653,227 @@ init().catch(err => {
 
 
 
-/* constitutional-map-inspired patch */
-(function(){
-  const originalApplyFilters = typeof applyFilters === 'function' ? applyFilters : null;
-  const originalBuildMap = typeof buildMap === 'function' ? buildMap : null;
-
-  function atlasSourceCount(country){
-    const refs = country?.primary_sources || country?.references || [];
-    return Array.isArray(refs) ? refs.length : 0;
+/* refined map + clusters + performance patch */
+function getCountriesList() {
+  return Array.isArray(state?.countries) ? state.countries : [];
+}
+function getVisibleCountries() {
+  return Array.isArray(state?.filtered) && state.filtered.length ? state.filtered : getCountriesList();
+}
+function getSourceCount(country) {
+  const refs = country?.primary_sources || country?.references || [];
+  return Array.isArray(refs) ? refs.length : 0;
+}
+function getRegulatoryCluster(country) {
+  const ex = String(country?.status?.exchanges || '').toLowerCase();
+  const st = String(country?.status?.stablecoins || '').toLowerCase();
+  const score = Number(country?.score || 0);
+  if (/banned|hostile|prohibited/.test(ex + ' ' + st) || score < 35) return { key:'restrictive', label: state.lang==='pt' ? 'Restritivo' : 'Restrictive' };
+  if (/litigation|warning|enforcement/.test(ex + ' ' + st)) return { key:'enforcement', label: state.lang==='pt' ? 'Enforcement-driven' : 'Enforcement-driven' };
+  if (/regulated|licensed|mica|framework/.test(ex + ' ' + st) && score >= 65) return { key:'compliance', label: state.lang==='pt' ? 'Compliance-heavy' : 'Compliance-heavy' };
+  if (/open|operating|active|specialized/.test(ex + ' ' + st) && score >= 60) return { key:'innovation', label: state.lang==='pt' ? 'Pró-inovação' : 'Innovation-friendly' };
+  return { key:'emerging', label: state.lang==='pt' ? 'Emergente' : 'Emerging' };
+}
+function clusterToScore(country) {
+  const key = getRegulatoryCluster(country).key;
+  return ({ innovation:85, compliance:68, enforcement:52, emerging:42, restrictive:18 })[key] || (country?.score || 0);
+}
+function getMapMetric(country, mode) {
+  if (mode === 'stablecoins') {
+    const s = String(country?.status?.stablecoins || '').toLowerCase();
+    if (/regulated|mature|integrated|active/.test(s)) return 85;
+    if (/partial|developing|under/.test(s)) return 60;
+    if (/uncertain|limited/.test(s)) return 40;
+    if (/banned|prohibited/.test(s)) return 15;
+    return country?.score || 0;
   }
-
-  function atlasCluster(country){
-    const ex = String(country?.status?.exchanges || '').toLowerCase();
-    const st = String(country?.status?.stablecoins || '').toLowerCase();
-    const cbdc = String(country?.status?.cbdc || '').toLowerCase();
-    const score = Number(country?.score || 0);
-    if (/banned|prohibited|hostile/.test(ex + ' ' + st) || score < 35) return { key:'restrictive', label: state.lang==='pt' ? 'Restritivo' : 'Restrictive' };
-    if (/litigation|enforcement|warning/.test(ex) || /research only/.test(cbdc)) return { key:'enforcement', label: state.lang==='pt' ? 'Enforcement-driven' : 'Enforcement-driven' };
-    if (/mica|regulated|licensed|framework/.test(ex + ' ' + st) && score >= 65) return { key:'compliance', label: state.lang==='pt' ? 'Compliance-heavy' : 'Compliance-heavy' };
-    if (/open|operating|specialized|active/.test(ex + ' ' + st) && score >= 60) return { key:'innovation', label: state.lang==='pt' ? 'Pró-inovação' : 'Innovation-friendly' };
-    return { key:'emerging', label: state.lang==='pt' ? 'Emergente' : 'Emerging' };
+  if (mode === 'cbdc') {
+    const s = String(country?.status?.cbdc || '').toLowerCase();
+    if (/launched|advanced|retail launched/.test(s)) return 90;
+    if (/pilot|wholesale|cross-border/.test(s)) return 70;
+    if (/research|consultation|exploration/.test(s)) return 45;
+    if (/not central/.test(s)) return 20;
+    return country?.score || 0;
   }
+  if (mode === 'cluster') return clusterToScore(country);
+  return country?.score || 0;
+}
+function getMapModeLabel(mode) {
+  return ({
+    score: state.lang === 'pt' ? 'Mapa comparativo por score.' : 'Comparative map by score.',
+    cluster: state.lang === 'pt' ? 'Mapa por modelo regulatório.' : 'Map by regulatory model.',
+    stablecoins: state.lang === 'pt' ? 'Mapa focado em stablecoins.' : 'Stablecoins-focused map.',
+    cbdc: state.lang === 'pt' ? 'Mapa focado em CBDC.' : 'CBDC-focused map.'
+  })[mode] || '';
+}
+function renderExplorerSummary() {
+  const filtered = getVisibleCountries();
+  const regions = new Set(filtered.map(c => c.region).filter(Boolean));
+  const verified = filtered.filter(c => /primary|source_backed|verified/i.test(String(c.profile_quality || '')) || getSourceCount(c) > 0).length;
 
-  function atlasBuildClusterSummary(countries){
+  const mf = document.getElementById('micro-filtered');
+  const mr = document.getElementById('micro-regions');
+  const mv = document.getElementById('micro-verified');
+  if (mf) mf.textContent = String(filtered.length);
+  if (mr) mr.textContent = String(regions.size);
+  if (mv) mv.textContent = String(verified);
+
+  const clusterBox = document.getElementById('cluster-pills');
+  if (clusterBox) {
     const counts = {};
-    countries.forEach(c=>{
-      const cl = atlasCluster(c);
+    filtered.forEach(c => {
+      const cl = getRegulatoryCluster(c);
       counts[cl.key] = counts[cl.key] || { label: cl.label, count: 0 };
       counts[cl.key].count += 1;
     });
-    return Object.entries(counts).sort((a,b)=>b[1].count-a[1].count).map(([key, item]) =>
-      `<span class="cluster-pill cluster-${key}">${item.label}<em>${item.count}</em></span>`
-    ).join('');
+    clusterBox.innerHTML = Object.entries(counts)
+      .sort((a,b)=>b[1].count-a[1].count)
+      .map(([key,item]) => `<span class="cluster-pill cluster-${key}">${item.label}<em>${item.count}</em></span>`)
+      .join('');
   }
 
-  function atlasRenderExplorer(){
-    const filtered = Array.isArray(state.filtered) && state.filtered.length ? state.filtered : (state.countries || []);
-    const regions = new Set(filtered.map(c => c.region).filter(Boolean));
-    const verified = filtered.filter(c => /primary|source_backed|verified/i.test(String(c.profile_quality || '')) || atlasSourceCount(c) > 0).length;
+  const pills = document.getElementById('selected-country-pills');
+  if (pills) {
     const top = filtered.slice().sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,8);
-
-    const mf = document.getElementById('micro-filtered');
-    const mr = document.getElementById('micro-regions');
-    const mv = document.getElementById('micro-verified');
-    const cp = document.getElementById('cluster-pills');
-    const sp = document.getElementById('selected-country-pills');
-    if (mf) mf.textContent = String(filtered.length);
-    if (mr) mr.textContent = String(regions.size);
-    if (mv) mv.textContent = String(verified);
-    if (cp) cp.innerHTML = atlasBuildClusterSummary(filtered);
-    if (sp) {
-      sp.innerHTML = top.map(c => `<button class="country-pill" data-iso3="${c.iso3}" title="${c.country}">${c.country}</button>`).join('');
-      sp.querySelectorAll('.country-pill').forEach(btn=>{
-        btn.addEventListener('click', ()=>{
-          const country = state.countries.find(c => c.iso3 === btn.dataset.iso3);
-          if (country) { state.selected = country; renderCountryPanel(); if (typeof buildMap === 'function') buildMap(); }
-        });
+    pills.innerHTML = top.map(c => `<button class="country-pill" data-iso3="${c.iso3}">${c.country}</button>`).join('');
+    pills.querySelectorAll('.country-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const c = getCountriesList().find(x => x.iso3 === btn.dataset.iso3);
+        if (c) {
+          state.selected = c;
+          renderCountryPanel();
+          scheduleMapRender();
+        }
       });
-    }
+    });
   }
 
-  function atlasValueForMode(country, mode){
-    if (mode === 'stablecoins') {
-      const s = String(country?.status?.stablecoins || '').toLowerCase();
-      if (/regulated|mature|integrated|active/.test(s)) return 85;
-      if (/partial|developing|under/.test(s)) return 60;
-      if (/uncertain|limited/.test(s)) return 42;
-      if (/banned|prohibited/.test(s)) return 18;
-      return Number(country?.score || 0);
-    }
-    if (mode === 'cbdc') {
-      const s = String(country?.status?.cbdc || '').toLowerCase();
-      if (/launched|advanced|retail launched/.test(s)) return 90;
-      if (/pilot|wholesale|cross-border/.test(s)) return 70;
-      if (/research|consultation|exploration/.test(s)) return 48;
-      if (/not central/.test(s)) return 28;
-      return Number(country?.score || 0);
-    }
-    if (mode === 'cluster') {
-      const key = atlasCluster(country).key;
-      return ({ innovation: 85, compliance: 68, enforcement: 50, emerging: 42, restrictive: 18 })[key] || Number(country?.score || 0);
-    }
-    return Number(country?.score || 0);
-  }
+  const legend = document.getElementById('map-mode-legend');
+  const mode = document.getElementById('map-mode')?.value || 'score';
+  if (legend) legend.textContent = getMapModeLabel(mode);
+}
 
-  function atlasModeLabel(mode){
-    return ({
-      score: state.lang==='pt' ? 'Score comparativo' : 'Comparative score',
-      cluster: state.lang==='pt' ? 'Modelo regulatório' : 'Regulatory model',
-      stablecoins: 'Stablecoins',
-      cbdc: 'CBDC'
-    })[mode] || 'Score';
-  }
+let _atlas_map_render_scheduled = false;
+function scheduleMapRender() {
+  if (_atlas_map_render_scheduled) return;
+  _atlas_map_render_scheduled = true;
+  requestAnimationFrame(() => {
+    _atlas_map_render_scheduled = false;
+    if (document.getElementById('world-map') && state.view === 'map') {
+      buildMap();
+    }
+  });
+}
 
-  if (originalBuildMap) {
-    buildMap = function atlasBuildMapPatched() {
-      const mode = document.getElementById('map-mode')?.value || 'score';
-      const source = Array.isArray(state.filtered) && state.filtered.length ? state.filtered : state.countries;
-      const values = {};
-      source.forEach(c => {
-        const code = getMapCode(c);
-        if (code && !MARKER_ONLY.has(c.iso3)) values[code] = atlasValueForMode(c, mode);
+(function patchMapBuild(){
+  if (typeof buildMap !== 'function') return;
+  const _origBuildMap = buildMap;
+  buildMap = function patchedBuildMap() {
+    const source = getVisibleCountries();
+    const mode = document.getElementById('map-mode')?.value || 'score';
+    const values = {};
+    source.forEach(c => {
+      const code = getMapCode(c);
+      if (code && !MARKER_ONLY.has(c.iso3)) values[code] = getMapMetric(c, mode);
+    });
+
+    const markers = source.filter(c => MARKER_COORDS[c.iso3]).map(c => ({
+      name: state.lang === 'pt' ? (MARKER_COORDS[c.iso3].label_pt || c.country) : (MARKER_COORDS[c.iso3].label_en || c.country),
+      coords: [MARKER_COORDS[c.iso3].lat, MARKER_COORDS[c.iso3].lng],
+      iso3: c.iso3,
+      score: getMapMetric(c, mode)
+    }));
+
+    const selectedCode = state.selected ? getMapCode(state.selected) : null;
+    const selectedMarkerIndex = state.selected ? markers.findIndex(m => m.iso3 === state.selected.iso3) : -1;
+
+    try {
+      if (state.map) state.map.destroy();
+      state.map = new jsVectorMap({
+        selector: '#world-map',
+        map: 'world',
+        backgroundColor: 'transparent',
+        zoomButtons: true,
+        zoomOnScroll: true,
+        visualizeData: { scale: ['#b91c1c','#f97316','#eab308','#16a34a','#14532d'], values },
+        regionStyle: { initial: { fill: '#dbe4ef', fillOpacity: 1, stroke: '#fff', strokeWidth: 0.7 }, selected: { fill: '#1d4ed8' } },
+        markers,
+        markerStyle: {
+          initial: { r: 5, fill: '#0f172a', stroke: '#ffffff', strokeWidth: 1.5 },
+          hover: { fill: '#1d4ed8' },
+          selected: { fill: '#1d4ed8', r: 6 }
+        },
+        selectedRegions: selectedCode ? [selectedCode] : [],
+        selectedMarkers: selectedMarkerIndex >= 0 ? [selectedMarkerIndex] : [],
+        onRegionTooltipShow(_, tooltip, code) {
+          const country = source.find(c => getMapCode(c) === code) || getCountriesList().find(c => getMapCode(c) === code);
+          if (!country) { tooltip.text(`${code}: ${t('noData')}`); return; }
+          const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
+          const cluster = getRegulatoryCluster(country);
+          tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cluster.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${getSourceCount(country)}</div></div>`);
+        },
+        onMarkerTooltipShow(_, tooltip, index) {
+          const marker = markers[index];
+          const country = source.find(c => c.iso3 === marker.iso3) || getCountriesList().find(c => c.iso3 === marker.iso3);
+          if (!country) { tooltip.text(`${t('markerTooltip')}: ${marker.name}`); return; }
+          const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
+          const cluster = getRegulatoryCluster(country);
+          tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cluster.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${getSourceCount(country)}</div></div>`);
+        },
+        onRegionClick(_, code) {
+          const country = getCountriesList().find(c => getMapCode(c) === code);
+          if (country) { state.selected = country; renderCountryPanel(); scheduleMapRender(); }
+        },
+        onMarkerClick(_, index) {
+          const marker = markers[index];
+          const country = getCountriesList().find(c => c.iso3 === marker.iso3);
+          if (country) { state.selected = country; renderCountryPanel(); scheduleMapRender(); }
+        }
       });
-      const markers = source
-        .filter(c => MARKER_COORDS[c.iso3])
-        .map(c => ({
-          name: state.lang === 'pt' ? (MARKER_COORDS[c.iso3].label_pt || c.country) : (MARKER_COORDS[c.iso3].label_en || c.country),
-          coords: [MARKER_COORDS[c.iso3].lat, MARKER_COORDS[c.iso3].lng],
-          iso3: c.iso3,
-          score: atlasValueForMode(c, mode)
-        }));
-      const selectedCode = state.selected ? getMapCode(state.selected) : null;
-      const selectedMarkerIndex = state.selected ? markers.findIndex(m => m.iso3 === state.selected.iso3) : -1;
-      try {
-        if (state.map) state.map.destroy();
-        state.map = new jsVectorMap({
-          selector: '#world-map',
-          map: 'world',
-          backgroundColor: 'transparent',
-          zoomButtons: true,
-          zoomOnScroll: true,
-          visualizeData: { scale: ['#b91c1c','#f97316','#eab308','#16a34a','#14532d'], values },
-          regionStyle: { initial: { fill: '#dbe4ef', fillOpacity: 1, stroke: '#fff', strokeWidth: 0.7 }, selected: { fill: '#1d4ed8' } },
-          markers,
-          markerStyle: {
-            initial: { r: 5, fill: '#0f172a', stroke: '#ffffff', strokeWidth: 1.5 },
-            hover: { fill: '#1d4ed8' },
-            selected: { fill: '#1d4ed8', r: 6 }
-          },
-          selectedRegions: selectedCode ? [selectedCode] : [],
-          selectedMarkers: selectedMarkerIndex >= 0 ? [selectedMarkerIndex] : [],
-          onRegionTooltipShow(_, tooltip, code) {
-            const country = source.find(c => getMapCode(c) === code) || state.countries.find(c => getMapCode(c) === code);
-            if (!country) { tooltip.text(`${code}: ${t('noData')}`); return; }
-            const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
-            const cl = atlasCluster(country);
-            tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${atlasModeLabel(mode)}: ${atlasValueForMode(country, mode)}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cl.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${atlasSourceCount(country)}</div></div>`);
-          },
-          onMarkerTooltipShow(_, tooltip, index) {
-            const marker = markers[index];
-            const country = source.find(c => c.iso3 === marker.iso3) || state.countries.find(c => c.iso3 === marker.iso3);
-            if (!country) { tooltip.text(`${t('markerTooltip')}: ${marker.name}`); return; }
-            const summary = state.lang === 'pt' ? country.summary_pt : country.summary_en;
-            const cl = atlasCluster(country);
-            tooltip.html(`<div style="max-width:280px"><strong>${esc(country.country)}</strong><br>${t('score')}: ${country.score}<br>${atlasModeLabel(mode)}: ${atlasValueForMode(country, mode)}<br>${t('classification')}: ${translateClassification(country.classification)}<br><span class="tooltip-cluster">${esc(cl.label)}</span><br><span style="color:#64748b">${esc((summary || '').slice(0,140))}${summary && summary.length > 140 ? '...' : ''}</span><br><div style="margin-top:8px;color:#64748b">Sources: ${atlasSourceCount(country)}</div></div>`);
-          },
-          onRegionClick(_, code) {
-            const country = state.countries.find(c => getMapCode(c) === code);
-            if (country) { state.selected = country; renderCountryPanel(); buildMap(); }
-          },
-          onMarkerClick(_, index) {
-            const marker = markers[index];
-            const country = state.countries.find(c => c.iso3 === marker.iso3);
-            if (country) { state.selected = country; renderCountryPanel(); buildMap(); }
-          }
-        });
-      } catch (err) {
-        console.error('Map render failed', err);
-      }
       renderMapCoverage(values, markers);
+      renderExplorerSummary();
+    } catch (err) {
+      console.error('Map render failed', err);
+      const mapEl = document.getElementById('world-map');
+      if (mapEl) mapEl.innerHTML = `<div class="empty-state"><h3>Error</h3><p>${esc(err.message || 'Map failed')}</p></div>`;
     }
   }
+})();
 
-  applyFilters = function atlasApplyFiltersPatched() {
-    if (originalApplyFilters) originalApplyFilters();
+(function patchApplyFilters(){
+  if (typeof applyFilters !== 'function') return;
+  const _origApplyFilters = applyFilters;
+  applyFilters = function patchedApplyFilters() {
+    _origApplyFilters();
     const q = document.getElementById('semantic-search')?.value?.trim()?.toLowerCase();
     if (q) {
-      state.filtered = state.filtered.filter(c => JSON.stringify(c).toLowerCase().includes(q));
+      state.filtered = getVisibleCountries().filter(c => JSON.stringify(c).toLowerCase().includes(q));
       if (state.selected && !state.filtered.some(c => c.iso3 === state.selected.iso3)) {
-        state.selected = state.filtered[0] || state.selected;
+        state.selected = state.filtered[0] || getCountriesList()[0] || null;
       }
       renderAll();
-    } else {
-      atlasRenderExplorer();
+      return;
     }
+    renderExplorerSummary();
   }
+})();
 
-  const originalRenderAll = typeof renderAll === 'function' ? renderAll : null;
-  if (originalRenderAll) {
-    renderAll = function atlasRenderAllPatched() {
-      originalRenderAll();
-      atlasRenderExplorer();
-    }
+(function patchRenderAll(){
+  if (typeof renderAll !== 'function') return;
+  const _origRenderAll = renderAll;
+  renderAll = function patchedRenderAll() {
+    _origRenderAll();
+    renderExplorerSummary();
+    scheduleMapRender();
   }
+})();
 
-  const originalSetupControls = typeof setupControls === 'function' ? setupControls : null;
-  if (originalSetupControls) {
-    setupControls = function atlasSetupControlsPatched() {
-      originalSetupControls();
-      document.getElementById('map-mode')?.addEventListener('change', ()=> { if (typeof buildMap === 'function') buildMap(); });
-      document.getElementById('semantic-search')?.addEventListener('input', ()=> applyFilters());
-    }
+(function patchSetupControls(){
+  if (typeof setupControls !== 'function') return;
+  const _origSetupControls = setupControls;
+  setupControls = function patchedSetupControls() {
+    _origSetupControls();
+    document.getElementById('map-mode')?.addEventListener('change', () => scheduleMapRender());
+    document.getElementById('semantic-search')?.addEventListener('input', () => applyFilters());
   }
 })();

@@ -1,2 +1,2 @@
-Patch inspirado no Constitutional Map. Substitua index.html, script.js e style.css no repositório.
-Inclui: painel de exploração, modo do mapa, clusters regulatórios, busca semântica leve e tooltips ricos.
+Substitua index.html, script.js e style.css na raiz do repositório.
+Inclui: correção do init(), mapa refinado por modos, clusters regulatórios, performance com scheduleMapRender e busca semântica leve.
