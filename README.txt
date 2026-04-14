@@ -1,0 +1,1 @@
+Patch para correção de mapa e normalização de dados.
